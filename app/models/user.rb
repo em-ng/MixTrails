@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    #FIGVAPER
+    
     validates :firstname, :lastname, :password_digest, presence: true
     validates :email, :session_token, presence: true, uniqueness: true
     validates :password, length: {minimum: 6}, allow_nil: true
