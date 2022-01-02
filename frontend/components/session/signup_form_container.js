@@ -6,18 +6,19 @@ const mSTP = state => {
     return {
         formHeader: 'Create your free account',
         formType: 'Sign up',
-        form: {
-            firstName: '',
-            lastName: '',
+        nullUser: {
+            firstname: '',
+            lastname: '',
             email: '',
             password: ''
-        }
+        },
+        errors: state.errors.session
     }
 }
 
 const mDTP = dispatch => {
     return {
-        action: user => dispatch(signUp(user))
+        processForm: user => dispatch(signUp(user))
     }
 }
 
