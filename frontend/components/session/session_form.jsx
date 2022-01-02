@@ -3,7 +3,7 @@ import React from 'react';
 class SessionForm extends React.Component {
     // constructor(props) {
     //     super(props);
-    //     this.state = {};
+    //     this.state = this.props.nullUser;
     // }
 
     // update(field) {
