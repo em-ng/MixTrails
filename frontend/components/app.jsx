@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 import SignUpFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 

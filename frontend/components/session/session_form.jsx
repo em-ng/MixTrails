@@ -17,8 +17,18 @@ class SessionForm extends React.Component {
           .then(() => this.props.history.replace('/'))
     }
 
+    // renderErrors() {
+    //     debugger
+    //     const errors = this.props.errors;
+    //     console.log(errors)
+    // }
+
     render() {
         const { formHeader, formType } = this.props;
+
+        if (formType === 'Sign up') {
+            
+        }
 
         return(
             <div className='session-form'>
