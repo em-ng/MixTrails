@@ -26,30 +26,31 @@ class SessionForm extends React.Component {
     render() {
         const { formHeader, formType } = this.props;
 
-        if (formType === 'Sign up') {
-            
-        }
+        const nameFields = (formType === 'Sign up' ? (
+        <div>
+          <label className='form-input'>
+              <input type="text"
+                     value={this.state.firstname}
+                     placeholder="First name"
+                     onChange={this.update('firstname')}
+              />
+          </label>
+
+          <label className='session-input'>
+              <input type="text"
+                     value={this.state.lastname}
+                     placeholder="Last name"
+                     onChange={this.update('lastname')}
+              />
+          </label> 
+        </div>
+        ) : "" )
 
         return(
             <div className='session-form'>
                 <h2>{formHeader}</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label className='form-input'>
-                        <input type="text"
-                          value={this.state.firstname}
-                          placeholder="First name"
-                          onChange={this.update('firstname')}
-                        />
-                    </label>
-
-                    <label className='session-input'>
-                        <input type="text"
-                          value={this.state.lastname}
-                          placeholder="Last name"
-                          onChange={this.update('lastname')}
-                        />
-                    </label>
-
+                    { nameFields }
                     <label className='session-input'>
                         <input type="email"
                           value={this.state.email}
