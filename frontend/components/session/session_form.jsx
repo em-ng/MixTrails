@@ -17,9 +17,17 @@ class SessionForm extends React.Component {
           .then(() => this.props.history.replace('/'))
     }
 
-    // renderErrors() {
-    //     const errors = this.props.errors;
-    // }
+    renderErrors() {
+        return(
+            <ul>
+              {this.props.errors.map((error, i) => (
+                <li key={`error-${i}`}>
+                  {error}
+                </li>
+              ))}
+            </ul>
+          );
+    }
 
     render() {
         const { formHeader, formType } = this.props;
@@ -48,6 +56,7 @@ class SessionForm extends React.Component {
             <div className='session-form'>
                 <h2>{formHeader}</h2>
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                     { nameFields }
                     <label className='session-input'>
                         <input type="email"
