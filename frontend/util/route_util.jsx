@@ -4,7 +4,7 @@ import { Redirect, Route, withRouter} from 'react-router-dom';
 
 const mSTP = state => {
     return {
-        loggedIn: Boolean[state.session.currentUserId]
+        loggedIn: Boolean(state.session.currentUserId)
     }
 }
 
