@@ -2,15 +2,15 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import SignUpFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = () => (
   <div>
     <header>
-        <h1>hello ^-^, I am working!</h1>
+      <NavBarContainer />
     </header>
     <Switch>
-        {/* <Route path='/' component={NavBarContainer} />
-        <Route exact path='/' component={Home} /> */}
+        {/* <Route exact path='/' component={Home} /> */}
         <Route path='/signup' component={SignUpFormContainer} />
         <Route path='/login' component={LoginFormContainer} />
     </Switch>
