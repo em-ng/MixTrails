@@ -9,6 +9,8 @@ const App = () => (
         <h1>hello ^-^, I am working!</h1>
     </header>
     <Switch>
+        {/* <Route path='/' component={NavBarContainer} />
+        <Route exact path='/' component={Home} /> */}
         <Route path='/signup' component={SignUpFormContainer} />
         <Route path='/login' component={LoginFormContainer} />
     </Switch>
