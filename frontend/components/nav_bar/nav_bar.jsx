@@ -39,10 +39,12 @@ const NavBar = ({ currentUser, logout }) => {
                         </ul>
                     </Link>
                 </div>
-
             </div>
+
             <div className="nav-logo">
-                <Link to='/'>MixTrails</Link>
+                <Link to='/'>
+                    MixTrails
+                </Link>
             </div>
 
             <div className="nav-buttons">
