@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        const { formHeader, formType } = this.props;
+        const { formHeader, formType, text, link } = this.props;
 
         const nameFields = (formType === 'Sign up' ? (
         <div>
@@ -86,8 +86,8 @@ class SessionForm extends React.Component {
                     </label>
                     <button className="session-submit">{formType}</button>
                 </form>
-                <p></p>
-                <em>Looking for an adventure? Log in as a <span onClick={this.handleDemoUser}>demo user</span></em>
+                <p className="session-text">{text} {link}</p>
+                <em className="session-text">Looking for an adventure? Log in as a <button onClick={this.handleDemoUser}>demo user</button></em>
             </div>
         )
     }

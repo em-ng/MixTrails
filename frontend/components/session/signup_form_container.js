@@ -1,4 +1,6 @@
+import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { signUp, login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
@@ -12,6 +14,8 @@ const mSTP = state => {
             email: '',
             password: ''
         },
+        text: "Already have an account?",
+        link: <Link to='/login' className='session-link'>Log in</Link>,
         errors: state.errors.session
     }
 }
