@@ -8,9 +8,9 @@ class SessionForm extends React.Component {
         this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.props.clearErrors();
-    // }
+    componentDidMount() {
+        this.props.clearErrors();
+    }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
