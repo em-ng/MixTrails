@@ -64,6 +64,7 @@ class SessionForm extends React.Component {
         ) : "" )
 
         return(
+          <div className="session-bg">
             <div className='session-form'>
                 <h2>{formHeader}</h2>
                 <form onSubmit={this.handleSubmit}>
@@ -89,6 +90,7 @@ class SessionForm extends React.Component {
                 <p className="session-text">{text} {link}</p>
                 <em className="session-text">Looking for an adventure? Log in as a <button onClick={this.handleDemoUser}>demo user</button></em>
             </div>
+          </div>
         )
     }
 }

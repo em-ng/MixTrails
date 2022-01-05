@@ -1,0 +1,17 @@
+.session-bg {
+    background-image: image-url('nightsky.jpg');
+    height: 95vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: cover;
+    // border: 2px solid blue;
+}
+
+.session-form {
+    border: 2px solid orange;
+    display: flex-wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
