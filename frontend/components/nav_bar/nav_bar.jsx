@@ -17,6 +17,7 @@ const NavBar = ({ currentUser, logout }) => {
         <nav className="nav-bar">
               
             <div className="dropdown">
+                <span className="save-text">Explore</span>
                 <span className="save-text">Saved</span>
                 <div className="dropdown-content">
                     <Link to="/signup">My favorites</Link>
