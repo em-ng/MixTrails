@@ -16,7 +16,7 @@ const Home = ({ currentUser }) => {
                 <div className="home-content">
                     {text}
                     <div className="search-bar">
-                        <input type="text" placeholder="Search by city, park, or trail name" />
+                        <input className="search-box" type="text" placeholder="Search by city, park, or trail name" />
                     </div>
                 </div>
             </div>

@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
     const buttons = (currentUser ? (
-        <div className="logout-button">
-            <button onClick={logout}>Logout</button>
-        </div>
+        <div className="profile">
+            <img className="profile-icon" src={window.profile_url}></img>
+            <div className="profile-content">
+                <button onClick={logout}>Logout</button>
+            </div>
+        </div>   
     ) : (
         <div className="nav-buttons">
             <Link to='/signup' className="sign-in">Sign Up</Link>
