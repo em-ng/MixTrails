@@ -15,35 +15,35 @@ const NavBar = ({ currentUser, logout }) => {
 
     return(
         <nav className="nav-bar">
-            <div className="nav-links">
-                <div className="explore">
-                    <Link to='/'>Explore</Link>
+              
+            <div className="dropdown">
+                <span className="save-text">Saved</span>
+                <div className="dropdown-content">
+                    <Link to="/signup">My favorites</Link>
+                    <Link to="/signup">My maps</Link>
+                    <Link to="/signup">Lists</Link>
+                    <Link to="/signup">Activities</Link>
+                    <Link to="/signup">Completed</Link>
+                    <Link to="/signup">Create map</Link>
                 </div>
-                <div className="saved">
-                    <Link to="/">Saved
-                        <ul>
-                            <li>My favorites</li>
-                            <li>My maps</li>
-                            <li>Lists</li>
-                            <li>Activities</li>
-                            <li>Completed</li>
-                            <li>Create Map</li>
-                        </ul>
-                    </Link>
-                </div>
-                <div className="shop">
+            </div>
+
+                {/* <div className="shop">
                     <Link to="/">Shop
                         <ul>
                             <li>MixTrails Gear</li>
                             <li>Give Pro</li>
                         </ul>
                     </Link>
-                </div>
-            </div>
+                </div> */}
+                {/* <div className="explore">
+                    <Link to='/'>Explore</Link>
+                </div> */}
 
-            <div className="nav-logo">
-                <Link to='/'>
-                    MixTrails
+            <div>
+                <Link to='/' className="nav-logo">
+                    <img className='logo-icon' src={window.logo_url}></img>
+                    <span className='logo-text'>MixTrails</span>
                 </Link>
             </div>
 
@@ -55,3 +55,4 @@ const NavBar = ({ currentUser, logout }) => {
 }
 
 export default NavBar;
+
