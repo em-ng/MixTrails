@@ -1,11 +1,18 @@
 .session-bg {
-    background-image: image-url('nightsky.jpg');
-    height: 95vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-background-size: cover;
+    background-image: image-url('snow-mountain.jpg');
+    // height: 95vh;
+    // width: 100%;
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // -webkit-background-size: cover;
     // border: 2px solid blue;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 950px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .session-form {
