@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
     const buttons = (currentUser ? (
-        <div>
+        <div className="logout-button">
             <button onClick={logout}>Logout</button>
         </div>
     ) : (
-        <div>
+        <div className="nav-buttons">
             <Link to='/signup' className="sign-in">Sign Up</Link>
             <Link to='/login' className="login">Log In</Link>
         </div>
@@ -17,29 +17,27 @@ const NavBar = ({ currentUser, logout }) => {
         <nav className="nav-bar">
               
             <div className="dropdown">
-                <span className="save-text">Explore</span>
-                <span className="save-text">Saved</span>
-                <div className="dropdown-content">
-                    <Link to="/signup">My favorites</Link>
-                    <Link to="/signup">My maps</Link>
-                    <Link to="/signup">Lists</Link>
-                    <Link to="/signup">Activities</Link>
-                    <Link to="/signup">Completed</Link>
-                    <Link to="/signup">Create map</Link>
+                <div className="title">
+                    <span className="explore-text">Explore</span>
                 </div>
-            </div>
 
-                {/* <div className="shop">
-                    <Link to="/">Shop
-                        <ul>
-                            <li>MixTrails Gear</li>
-                            <li>Give Pro</li>
-                        </ul>
-                    </Link>
-                </div> */}
-                {/* <div className="explore">
-                    <Link to='/'>Explore</Link>
-                </div> */}
+                <div className="title" >
+                    <span className="save-text">Saved</span>
+                    <div className="dropdown-content">
+                        <Link to="/signup">My favorites</Link>
+                        <Link to="/signup">My maps</Link>
+                        <Link to="/signup">Lists</Link>
+                        <Link to="/signup">Activities</Link>
+                        <Link to="/signup">Completed</Link>
+                        <Link to="/signup">Create map</Link>
+                    </div>
+                </div>
+
+                <div className="title">
+                    <span className="shop-text">Shop</span>
+                </div>
+
+            </div>
 
             <div>
                 <Link to='/' className="nav-logo">
@@ -48,9 +46,8 @@ const NavBar = ({ currentUser, logout }) => {
                 </Link>
             </div>
 
-            <div className="nav-buttons">
-                {buttons}
-            </div>
+            {buttons}
+            
         </nav>
     )
 }
