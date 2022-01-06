@@ -1,0 +1,36 @@
+.home-background {
+    background-image: image-url('autumn.jpg');
+    height: 90vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bitter', serif;
+}
+
+.header {
+    // border: 2px solid orange;
+    font-size: 60px;
+    margin-top: 200px;
+    color: #6d9e52;
+    text-shadow: 2px 1px #ddd4d1;
+}
+
+.search-box {
+    // border: 2px solid orange;
+    height: 80px;
+    width: 800px;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    border-radius: 40px;
+    box-shadow: 3px 5px 5px #ddd4d1;
+    margin-top: 50px;
+    border: none;
+}

@@ -1,5 +1,7 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import { signUp } from '../../actions/session_actions';
+import { Link } from 'react-router-dom';
+import { signUp, login, clearErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 const mSTP = state => {
@@ -12,13 +14,17 @@ const mSTP = state => {
             email: '',
             password: ''
         },
+        text: "Already have an account?",
+        link: <Link to='/login' className='session-link'>Log in</Link>,
         errors: state.errors.session
     }
 }
 
 const mDTP = dispatch => {
     return {
-        processForm: user => dispatch(signUp(user))
+        processForm: user => dispatch(signUp(user)),
+        login: user => dispatch(login(user)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

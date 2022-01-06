@@ -7,7 +7,20 @@ import configureStore from './store/store';
 import * as SessionAPIUtil from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+
+  let store;
+  if (window.currentUser) {
+    const preloadedState = {
+      entities: {
+        users: { [window.currentUser.id]: window.currentUser }
+      },
+      session: { currentUserId: window.currentUser.id }
+    };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
 
   //window testing-delete later
   window.login = SessionAPIUtil.login;
