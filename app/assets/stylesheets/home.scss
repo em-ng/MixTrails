@@ -1,6 +1,6 @@
 .home-background {
     background-image: image-url('autumn.jpg');
-    height: 90vh;
+    height: 65vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -19,7 +19,7 @@
     // border: 2px solid orange;
     font-size: 60px;
     margin-top: 200px;
-    color: #6d9e52;
+    color: #40531b;
     text-shadow: 2px 1px #ddd4d1;
 }
 
@@ -33,4 +33,44 @@
     box-shadow: 3px 5px 5px #ddd4d1;
     margin-top: 50px;
     border: none;
+}
+
+.home-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.hometext-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #618b4a;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    h1 {
+        font-size: 73px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    h3 {
+        font-size: 21px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    p {
+       text-align: center;
+       font-size: 18px;
+       width: 400px;
+    }
+}
+
+.home-background-2 {
+    background-image: image-url('content.jpg');
+    height: 75vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
 }
