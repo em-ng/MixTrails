@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_06_203521) do
+ActiveRecord::Schema.define(version: 2022_01_07_055912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,37 @@ ActiveRecord::Schema.define(version: 2022_01_06_203521) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "parks", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.text "summary", null: false
+    t.string "park_type", null: false
+    t.integer "acreage", null: false
+    t.string "contact", null: false
+    t.float "lat", null: false
+    t.float "long", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_parks_on_name"
+  end
+
+  create_table "trails", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "summary"
+    t.string "difficulty"
+    t.float "length"
+    t.integer "elevation"
+    t.string "route_type"
+    t.float "lat"
+    t.float "long"
+    t.integer "park_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_trails_on_name"
+    t.index ["park_id"], name: "index_trails_on_park_id"
   end
 
   create_table "users", force: :cascade do |t|

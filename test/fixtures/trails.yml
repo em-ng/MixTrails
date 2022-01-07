@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  summary: MyText
+  difficulty: MyString
+  length: 1.5
+  elevation: 1
+  route_type: MyString
+  lat: 1.5
+  long: 1.5
+  park_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  summary: MyText
+  difficulty: MyString
+  length: 1.5
+  elevation: 1
+  route_type: MyString
+  lat: 1.5
+  long: 1.5
+  park_id: 1
