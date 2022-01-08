@@ -40,20 +40,30 @@ trail3 = Trail.create(name: "Flume Gorge Trail",
                       summary: "The Flume Gorge Trail is a 2.2 mile heavily trafficked loop trail located near Lincoln, New Hampshire that features a waterfall and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and snowshoeing and is best used from May until October.",
                       difficulty: "easy", length: 2.2, elevation: 488, route_type: "Loop",
                       lat: 44.0971, long: -71.67993, park_id: park1.id)
+trail4 = Trail.create(name: "Little Haystack via Falling Waters Trail",
+                      description: "A challenging hike in any season, but particularly so in winter. Haystack is the third highest peak in New York State. From Little Haystack you can begin to see Haystack, but before the final gentle ascent to Haystack, there is a serious step down to the Haystack ridge trail. This step is about 20 feet and very exposed, especially in winter, as the terrain drops away quickly into the valley to the east. In winter this area is very icy and requires some competence with an ice axe and crampons.",
+                      summary: "Little Haystack via Falling Waters Trail is a 5.6 mile heavily trafficked out and back trail located near Lincoln, New Hampshire that features a waterfall and is rated as difficult. The trail is primarily used for hiking and snowshoeing and is accessible year-round. Dogs are also able to use this trail.",
+                      difficulty: "hard", length: 5.6, elevation: 3034, route_type: "Out & back",
+                      lat: 44.14221, long: -71.68146, park_id: park1.id)
                       
                       
-trail4 = Trail.create(name: "Beehive Loop Trail",
+trail5 = Trail.create(name: "Beehive Loop Trail",
                       description: "The Beehive Trail Loop is a must-do hike for all visitors to Acadia National Park. This popular loop offers incredible views, with some challenging rung and ladder sections. Although the loop could technically be done in either direction, the counterclockwise way is highly recommended. Going counterclockwise, you go up the rungs and ladders, which is much easier than going down them.",
                       summary: "The Beehive Loop Trail is a 1.5 mile heavily trafficked loop trail located near Bar Harbor, Maine that features a lake and is rated as difficult. The trail is primarily used for hiking and is best used from May until October.",
                       difficulty: "hard", length: 1.5, elevation: 508, route_type: "Loop",
-                      lat: 44.33039, -68.18449, park_id: park2.id)
-trail5 = Trail.create(name: "Cadillac South Ridge Trail",
+                      lat: 44.33039, long: -68.18449, park_id: park2.id)
+trail6 = Trail.create(name: "Cadillac South Ridge Trail",
                       description: "The Cadillac South Ridge Trail is a gradual climb that does not meet Cadillac Summit Road until the very end. The trail briefly descends to a small pond called The Featherbed, where there is a wooden bench for taking a break and enjoying the pond. On the return, descend back down the Cadillac South Ridge Trail.",
                       summary: "Cadillac South Ridge Trail is a 6.7 mile heavily trafficked out and back trail located near Mount Desert, Maine that features a waterfall and is rated as moderate. The trail is primarily used for hiking and running and is best used from May until October. Dogs are also able to use this trail but must be kept on leash.",
                       difficulty: "moderate", length: 6.7, elevation: 1548, route_type: "Out & back",
                       lat: 44.31297, long: -68.21501, park_id: park2.id)
-trail6 = Trail.create(name: "Gorham Mountain Loop",
+trail7 = Trail.create(name: "Gorham Mountain Loop",
                       description: "The Gorham Mountain Loop is a wonderful hike that will take users over mountain ledges, along the shore of the Atlantic, and the iconic Sand Beach. Even in winter, this is an absolutely gorgeous hike, with some of the prettiest views to be seen. From the Gorham Mountain Trailhead users will go up and over the ledges of Gorham Mountain while taking in ocean views.",
                       summary: "Gorham Mountain Loop is a 3 mile heavily trafficked loop trail located near Bar Harbor, Maine that features a lake and is rated as moderate. The trail is primarily used for hiking. Dogs are also able to use this trail but must be kept on leash.",
                       difficulty: "moderate", length: 3.0, elevation: 583, route_type: "Loop",
                       lat: 44.31658, long: -68.19169, park_id: park2.id)
+trail8 = Trail.create(name: "Ocean Path Trail",
+                      description: "The easy 2.2 mile mostly flat one-way Ocean Path trail parallels the loop road all the way to Otter Point.  The path offers scenic views and numerous access points to outcroppings above the rocky shore, including major attractions like Thunder Hole and Otter Cliff. This is definitely a hike for the books!",
+                      summary: "Ocean Path Trail is a 4.5 mile heavily trafficked out and back trail located near Bar Harbor, Maine that features beautiful wild flowers and is good for all skill levels. The trail is primarily used for walking, running, and bird watching and is accessible year-round. Dogs are also able to use this trail but must be kept on leash.",
+                      difficulty: "easy", length: 4.5, elevation: 374, route_type: "Out & back",
+                      lat: 44.32985, long: -68.18432, park_id: park2.id)
