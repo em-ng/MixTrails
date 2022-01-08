@@ -6,7 +6,7 @@ class Trail < ApplicationRecord
 
     belongs_to :park,
     primary_key: :id,
-    foreign_key: :user_id,
+    foreign_key: :park_id,
     class_name: :Park
 
     has_one_attached :photo
