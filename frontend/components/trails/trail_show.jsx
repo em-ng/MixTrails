@@ -1,5 +1,6 @@
 import React from 'react';
 import NearbyTrailIndex from './nearby_trail_index';
+import SubNav from '../nav_bar/sub_nav';
 
 class TrailShow extends React.Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class TrailShow extends React.Component {
         return(
             <div className="trail-show">
                 {/* flex above class inner two-divs in column direction (trail top and trail bott) */}
+                <SubNav park={trail.park}/>
                 <div className="trail-top">
 
                 </div>
