@@ -31,6 +31,12 @@ trail1 = Trail.create(name: "Mount Lafayette and Franconia Ridge Trail",
                       summary: "Mount Lafayette and Franconia Ridge Trail Loop is a 9.3 mile heavily trafficked loop trail located near Lincoln, New Hampshire that features a waterfall and is only recommended for very experienced adventurers. The trail is primarily used for hiking and snowshoeing and is best used from April until October. Dogs are also able to use this trail.",
                       difficulty: "hard", length: 9.3, elevation: 3809, route_type: "Loop",
                       lat: 44.14216, long: -71.6812, park_id: park1.id)
+
+# trail1_photo = URI.open("https://mixtrails-dev.s3.amazonaws.com/trail1.jpg")
+# trail1_photo = URI.open("s3://mixtrails-dev/trail1.jpg")
+# trail1.photo.attach(io: trail1_photo, filename: "trail1.jpg")
+
+
 trail2 = Trail.create(name: "Artist Bluff Trail",
                       description: "This family-friendly, partially-paved trail goes by multiple cascading waterfalls and deep pools that are popular for wading and swimming.",
                       summary: "Artist Bluff Trail is a 1.5 mile heavily trafficked loop trail located near Franconia, New Hampshire that features a lake and is rated as moderate. The trail is primarily used for hiking, nature trips, and bird watching and is best used from April until October. Dogs are also able to use this trail but must be kept on leash.",

@@ -1,25 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TrailIndexItem = ({trails}) => (
+const NearbyTrailIndexItem = ({trails}) => (
    
     <ul>
         {
           trails.map(trail => 
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
-                <div className="trail-item-photo">
+                <div className="nearby-item-photo">
                   {/* <Link to={`/trails/${trail.id}`}> */}
                         {/* <img src= {trail`${trail.id}`.photoURL} className = 'trail-image'/> */}
                         {/* <img src= {trail.photo} className = 'trail-image'/> */}
                   {/* </Link> */}
                 </div>
 
-                <div className="trail-i-content">
-                    <h2>#{trail.id} - {trail.name}</h2>
-                    <p>{trail.park}</p>
+                <div className="nearby-i-content">
+                    <h3>{trail.name}</h3>
+                    <p>{trail.park.name}</p>
                     <p>{trail.difficulty}</p>
-                    <p>{trail.description}</p>
+                    <p>Length: {trail.length} mi</p>
                 </div>
 
             </Link>
@@ -29,4 +29,4 @@ const TrailIndexItem = ({trails}) => (
     
 )
 
-export default TrailIndexItem;
+export default NearbyTrailIndexItem;
