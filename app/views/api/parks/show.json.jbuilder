@@ -1,6 +1,6 @@
-json.park do
+# json.set! @park.id do
     json.extract! @park, :id, :name, :description, :summary, :park_type, :acreage, :contact, :lat, :long, :trails
-end
+# end
 
 # shows all trails(trail index)
 # json.trails do

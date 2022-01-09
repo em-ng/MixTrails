@@ -1,4 +1,4 @@
-import { RECEIVE_PARK } from "../actions/park_actions";
+import { RECEIVE_PARK, RECEIVE_ALL_TRAILS } from "../actions/park_actions";
 
 const parksReducer = (state = {}, action) => {
     Object.freeze(state)

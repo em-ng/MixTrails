@@ -1,13 +1,64 @@
 import React from 'react';
+import SubNav from '../nav_bar/sub_nav';
+import TrailIndex from '../trails/trail_index';
 
 class ParkShow extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.fetchPark(this.props.match.params.parkId)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.parkId !== prevProps.match.params.parkId) {
+            this.props.fetchPark(this.props.match.params.parkId)
+        }
     }
 
     render() {
+        const { park } = this.props;
+        // const { trails } = park;
+        if (!park) return null;
         return(
-            null
+            <div className="park-show">
+                <SubNav park={park}/>
+
+                {/* //missing photo slide */}
+
+                <div className='tiny-header'>
+                    {park.id === 1 ? <p>#1 of 60 state parks in New Hampshire</p> : <p>#10 of 60 national parks in United States of America</p>}
+                </div>
+
+                <div className='park-header'>
+                    <h2>Best trails in {park.name}</h2>
+                </div>
+
+                <div className='park-summ'>
+                    <p>{park.summary}</p>
+                </div>
+
+                {/* <div className='map'>
+
+                </div> */}
+
+                <div className="park-info">
+                    <div>
+                        <p className="park-title">Acreage:</p>
+                        <p className="park-text">{park.acreage} acres</p>
+
+                    </div>
+                    <div>
+                        <p className="park-title">Contact:</p>
+                        <p className="park-text">{park.contact}</p>
+                    </div>
+                </div>
+
+                <TrailIndex park={park}/>
+            </div>
+
+        
         )
     }
 }

@@ -10,4 +10,5 @@ class Trail < ApplicationRecord
     class_name: :Park
 
     has_one_attached :photo
+    # has_one_attached :map_photo
 end

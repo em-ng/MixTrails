@@ -5,9 +5,13 @@ class TrailShow extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.fetchTrail(this.props.match.params.trailId)
+    }
+
     render() {
         return(
-            null
+            <div>this is trails show page</div>
         )
     }
 }

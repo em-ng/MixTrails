@@ -5,6 +5,8 @@ import SignUpFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import HomeContainer from './home/home_container';
+import ParkShowContainer from './parks/park_show_container';
+import TrailShowContainer from './trails/trail_show_container';
 import Footer from './footer/footer';
 
 const App = () => (
@@ -13,9 +15,11 @@ const App = () => (
       <NavBarContainer />
     </header>
     <Switch>
-        <Route exact path='/' component={HomeContainer}/>
         <AuthRoute path='/signup' component={SignUpFormContainer} />
         <AuthRoute path='/login' component={LoginFormContainer} />
+        <Route path='/parks/:parkId' component={ParkShowContainer} />
+        <Route path='/trails/:trailId' component={TrailShowContainer} />
+        <Route exact path='/' component={HomeContainer}/>
     </Switch>
     <footer>
       <Footer />
