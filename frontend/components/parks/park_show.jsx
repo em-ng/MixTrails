@@ -21,15 +21,30 @@ class ParkShow extends React.Component {
 
     render() {
         const { park, trails } = this.props;
-        // const { trails } = park;
-        // debugger
         if (!park) return null;
         if(!trails) return null;
+
         return(
             <div className="park-show">
                 <SubNav park={park}/>
 
-                {/* //missing photo slide */}
+                <div className="park-photos">
+                    {
+                      Object.values(trails).map((trail, idx) => {
+                        if (park.id === 1 && idx < 3) {
+                            return(
+                            <div className="park-pic">
+                                <img src={trail.photoURL} className = 'trail-image'/>
+                            </div>)
+                        } else if (park.id === 2 && idx > 4) {
+                            return (
+                            <div className="park-pic">
+                                <img src={trail.photoURL} className = 'trail-image'/>
+                            </div>)
+                        }
+                      })
+                    }
+                </div>
 
                 <div className='tiny-header'>
                     {park.id === 1 ? <p>#1 of 60 state parks in New Hampshire</p> : <p>#10 of 60 national parks in United States of America</p>}

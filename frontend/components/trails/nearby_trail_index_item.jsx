@@ -9,10 +9,7 @@ const NearbyTrailIndexItem = ({trails}) => (
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
                 <div className="nearby-item-photo">
-                  {/* <Link to={`/trails/${trail.id}`}> */}
-                        {/* <img src= {trail`${trail.id}`.photoURL} className = 'trail-image'/> */}
-                        {/* <img src= {trail.photo} className = 'trail-image'/> */}
-                  {/* </Link> */}
+                
                 </div>
 
                 <div className="nearby-i-content">
