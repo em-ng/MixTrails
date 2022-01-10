@@ -15,8 +15,8 @@ class SubNav extends React.Component {
                     <p><Link to={`/parks/${this.props.park.id}`}>{this.props.park.name}</Link></p>
                 </div>
 
-                <div className="search-bar">
-                    <input type="text" placeholder='Enter a city, park or trail name' />
+                <div className="sub-search">
+                    <input className="tiny-search" type="text" placeholder='Enter a city, park or trail name' />
                 </div>
             </div>
 

@@ -18,6 +18,7 @@ const TrailIndexItem = ({trails}) => (
                   <h2>#{trail.id} - {trail.name}</h2>
                   <p>{trail.park.name}</p>
                   <p>{trail.difficulty}</p>
+                  <p>Length: {trail.length} mi</p>
                   <p>{trail.description}</p>
                 </div>
 
