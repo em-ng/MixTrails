@@ -25,6 +25,7 @@ class TrailShow extends React.Component {
                 {/* flex above class inner two-divs in column direction (trail top and trail bott) */}
                 <SubNav park={trail.park}/>
                 <div className="trail-top">
+                    <img src={trail.photoURL} className ="trail-image"/>
 
                 </div>
 

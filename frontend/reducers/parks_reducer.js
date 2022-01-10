@@ -1,4 +1,4 @@
-import { RECEIVE_PARK, RECEIVE_ALL_TRAILS } from "../actions/park_actions";
+import { RECEIVE_PARK } from "../actions/park_actions";
 
 const parksReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -8,10 +8,6 @@ const parksReducer = (state = {}, action) => {
         case RECEIVE_PARK:
             nextState[action.park.id] = action.park
             return nextState;
-            
-        // case RECEIVE_ALL_TRAILS:
-        //     nextState[action.trails.park_id] = action.trails
-        //     return nextState;
     
         default:
             return state;

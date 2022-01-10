@@ -9,18 +9,22 @@ class ParkShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchPark(this.props.match.params.parkId)
+        this.props.fetchTrails(this.props.match.params.parkId)
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.match.params.parkId !== prevProps.match.params.parkId) {
             this.props.fetchPark(this.props.match.params.parkId)
+            this.props.fetchTrails(this.props.match.params.parkId)
         }
     }
 
     render() {
-        const { park } = this.props;
+        const { park, trails } = this.props;
         // const { trails } = park;
+        // debugger
         if (!park) return null;
+        if(!trails) return null;
         return(
             <div className="park-show">
                 <SubNav park={park}/>
@@ -55,7 +59,7 @@ class ParkShow extends React.Component {
                     </div>
                 </div>
 
-                <TrailIndex park={park}/>
+                <TrailIndex trails={trails}/>
             </div>
 
         

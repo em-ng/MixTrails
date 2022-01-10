@@ -5,21 +5,20 @@ const TrailIndexItem = ({trails}) => (
    
     <ul>
         {
-          trails.map(trail => 
+          // park.trails.map(trail => 
+          Object.values(trails).map(trail =>
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
                 <div className="trail-item-photo">
-                  {/* <Link to={`/trails/${trail.id}`}> */}
-                        {/* <img src= {trail`${trail.id}`.photoURL} className = 'trail-image'/> */}
-                        {/* <img src= {trail.photo} className = 'trail-image'/> */}
-                  {/* </Link> */}
+                  <img src={trail.photoURL} className = 'trail-image'/>
+                  
                 </div>
 
                 <div className="trail-i-content">
-                    <h2>#{trail.id} - {trail.name}</h2>
-                    <p>{trail.park}</p>
-                    <p>{trail.difficulty}</p>
-                    <p>{trail.description}</p>
+                  <h2>#{trail.id} - {trail.name}</h2>
+                  <p>{trail.park.name}</p>
+                  <p>{trail.difficulty}</p>
+                  <p>{trail.description}</p>
                 </div>
 
             </Link>
