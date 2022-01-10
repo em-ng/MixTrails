@@ -28,6 +28,7 @@ class ParkShow extends React.Component {
             <div className="park-show">
                 <SubNav park={park}/>
 
+
                 <div className="park-photos">
                     {
                       Object.values(trails).map((trail, idx) => {
@@ -37,7 +38,7 @@ class ParkShow extends React.Component {
                                 <img src={trail.photoURL} className = 'trail-image'/>
                             </div>)
                         } else if (park.id === 2 && idx > 4) {
-                            return (
+                            return(
                             <div className="park-pic">
                                 <img src={trail.photoURL} className = 'trail-image'/>
                             </div>)
