@@ -10,8 +10,8 @@ class SubNav extends React.Component {
         return(
             <div className="sub-nav">
                 <div className="location">
-                    <p>United States of America ></p>
-                    {this.props.park.id === 1 ? <p>New Hampshire ></p> : <p>Maine ></p>}
+                    <p>United States of America > </p>
+                    {this.props.park.id === 1 ? <p>New Hampshire > </p> : <p>Maine > </p>}
                     <p><Link to={`/parks/${this.props.park.id}`}>{this.props.park.name}</Link></p>
                 </div>
 

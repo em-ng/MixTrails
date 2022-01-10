@@ -23,26 +23,28 @@ class ParkShow extends React.Component {
         const { park, trails } = this.props;
         if (!park) return null;
         if(!trails) return null;
+        const pictures = Object.values(trails).slice(0, 3)
 
         return(
             <div className="park-show">
                 <SubNav park={park}/>
 
-
+                {/* //missing photo slide */}
                 <div className="park-photos">
                     {
-                      Object.values(trails).map((trail, idx) => {
-                        if (park.id === 1 && idx < 3) {
+                      pictures.map((trail) => {
+                        if (park.id) {
                             return(
-                            <div className="park-pic">
-                                <img src={trail.photoURL} className = 'trail-image'/>
-                            </div>)
-                        } else if (park.id === 2 && idx > 4) {
-                            return(
-                            <div className="park-pic">
-                                <img src={trail.photoURL} className = 'trail-image'/>
-                            </div>)
+                            // <div className="park-pic">
+                                <img src={trail.photoURL} className ="trail-image"/>)
+                            // </div>)
                         }
+                        // else if (park.id === 2 && idx > 4) {
+                        //     return(
+                        //     <div className="park-pic">
+                        //         <img src={trail.photoURL} className ="trail-image"/>
+                        //     </div>)
+                        // }
                       })
                     }
                 </div>
