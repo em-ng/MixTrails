@@ -20,6 +20,7 @@ class ParkShow extends React.Component {
     }
 
     render() {
+        // debugger
         const { park, trails } = this.props;
         if (!park) return null;
         if(!trails) return null;
@@ -82,7 +83,7 @@ class ParkShow extends React.Component {
                     </div>
                 </div>
 
-                <TrailIndex trails={trails}/>
+                <TrailIndex park={park} trails={trails}/>
             </div>
 
         

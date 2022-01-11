@@ -8,7 +8,7 @@
     // align-items: center;
     // width: 68%;
     margin: auto;
-    border: 3px solid black;
+    // border: 3px solid black;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .tiny-header {
-    color: #40531B;
+    color: #414141;
     font-weight: 700;
     font-family: Proxima Nova, Arial, sans-serif;
     font-size: 14px;
@@ -53,7 +53,7 @@
         font-family: Proxima Nova, Arial, sans-serif;
         font-size: 32px;
         font-weight: 700;
-        color: #40531B;
+        color: #414141;
         padding: 0 0 8px;
         margin: 16px 0 0;
     }
@@ -63,8 +63,8 @@
     // display: flex;
     // flex-direction: column;
     // align-items: center;
-    font-size: 18px;
-    color: #40531B;
+    font-size: 17px;
+    color: #414141;
     line-height: 1.33;
     padding: 0 0 20px;
     width: 750px;
@@ -76,13 +76,13 @@
     font-family: Proxima Nova, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
-    color: #40531B;
+    color: #414141;
     line-height: 1.33;
     margin: 0 0 8px;
 }
 
 .park-blurb {
-    color: #40531B;
+    color: #5A5A5A;
     line-height: 1.33;
     margin-bottom: 16px;
     width: 750px;
@@ -94,7 +94,7 @@
     border-top: 1px solid rgb(207, 200, 200);
     h3 {
         font-size: 22px;
-        color: #40531B;
+        color: #414141;
         font-family: Proxima Nova, Arial, sans-serif;
         margin: 28px 0 12px;
         font-weight: 700;
@@ -117,7 +117,7 @@
 .park-title {
     line-height: 1.5;
     font-weight: 700;
-    color: #40531B;
+    color: #414141;
 }
 
 .park-text {
@@ -127,11 +127,11 @@
 
 .trail-index-title {
     border-top: 1px solid rgb(207, 200, 200);
-    border: 2px solid red;
+    // border: 2px solid red;
     h2 {
-        margin: 28px 0 24px;
+        margin: 26px 0 24px;
         font-size: 24px;
-        font-weight: 900;
+        font-weight: 700;
     }
 }
 
@@ -139,21 +139,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgb(214, 213, 213);
+    box-shadow: 2px 2px 10px rgb(214, 213, 213);
     height: 220px;
+    margin-bottom: 25px;
 }
 
 // delete below---------------
 
-.trail-item-photo {
-    border: 2px solid blue;
-}
+// .trail-item-photo {
+//     border: 2px solid blue;
+// }
 
 .trail-i-content {
-    border: 2px solid blue;
-
+    // border: 2px solid blue;
+    height: 85%;
+    margin-left: 15px;
 }
 
 // ------------------------
@@ -164,3 +166,80 @@
     border-radius: 8px;
 }
 
+.trail-i-content {
+    display: block;
+    flex-direction: column;
+    color: #414141;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.38;
+    overflow: hidden;
+    // white-space: nowrap;
+    text-overflow: ellipsis;
+    h3 {
+        // display: block;
+        font-size: 15px;
+        font-weight: 900;
+    }
+}
+
+.trail-park {
+    font-size: 14px;
+}
+
+.diff-rating {
+    display:flex;
+    // justify-content: flex-start;
+    align-items: center;
+    // margin
+    // border: 2px solid purple;
+}
+
+.easy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #69a041;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    width: 12%;
+    height: 20px;
+    // height: 15%;
+}
+
+.moderate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4bafe1;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    width: 12%;
+    height: 20px;
+}
+
+.hard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #676767;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    width: 12%;
+    // border: solid red;
+    height: 20px;
+}
+
+.trail-length {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.desc {
+    font-size: 16px;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+}

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TrailIndexItem = ({trails}) => (
-   
+const TrailIndexItem = ({park, trails}) => {
+  const parkId1 = Object.values(trails).slice(0, 4);
+  const parkId2 = Object.values(trails).slice(4, 8);
+   return(
     <ul>
         {
-          // park.trails.map(trail => 
           Object.values(trails).map(trail =>
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
@@ -15,22 +16,22 @@ const TrailIndexItem = ({trails}) => (
 
                 <div className="trail-i-content">
                   <h3>#{trail.id} - {trail.name}</h3>
-                  <p>{trail.park.name}</p>
+                  <p className="trail-park">{trail.park.name}</p>
 
                   <div className="diff-rating">
                     <p className={`${trail.difficulty}`}>{trail.difficulty}</p>
-                    <p className="rating">Review Stars</p>
+                    {/* <p className="rating">stars</p> */}
                   </div>
 
-                  <p>Length: {trail.length} mi</p>
-                  <p>{trail.description}</p>
+                  <p className="trail-length">Length: {trail.length} mi</p>
+                  <p className="desc">{trail.description}</p>
                 </div>
 
             </Link>
           )
         }
-    </ul>
+    </ul>)
     
-)
+}
 
 export default TrailIndexItem;
