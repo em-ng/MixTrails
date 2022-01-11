@@ -8,11 +8,13 @@ class ParkShow extends React.Component {
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchPark(this.props.match.params.parkId)
         this.props.fetchTrails(this.props.match.params.parkId)
     }
 
     componentDidUpdate(prevProps) {
+        // debugger
         if (this.props.match.params.parkId !== prevProps.match.params.parkId) {
             this.props.fetchPark(this.props.match.params.parkId)
             this.props.fetchTrails(this.props.match.params.parkId)

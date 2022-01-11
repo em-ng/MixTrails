@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NearbyTrailIndexItem = ({trails}) => (
+const NearbyTrailIndexItem = ({trails}) => {
+  debugger
+  return (
    
     <ul>
         {
@@ -9,6 +11,7 @@ const NearbyTrailIndexItem = ({trails}) => (
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
                 <div className="nearby-item-photo">
+                  <img src={trail.photoURL} className = 'trail-i-image'/> 
                 
                 </div>
 
@@ -23,7 +26,7 @@ const NearbyTrailIndexItem = ({trails}) => (
           )
         }
     </ul>
-    
-)
+  )
+}
 
 export default NearbyTrailIndexItem;

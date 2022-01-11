@@ -2,12 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TrailIndexItem = ({park, trails}) => {
-  const parkId1 = Object.values(trails).slice(0, 4);
-  const parkId2 = Object.values(trails).slice(4, 8);
+  let parkReal;
+  // const parkId1 = Object.values(trails).slice(0, 4);
+  // const parkId2 = Object.values(trails).slice(4, 8);
+
+
+
+  let parkId1 = [];
+  let parkId2 = [];
+
+  for (let k in trails) {
+    if (trails[k].park.id === 1) {
+      parkId1.push(trails[k])
+    } else {
+      (parkId2.push(trails[k]))
+    }
+  }
+
+  if (park.id === 1) {
+    parkReal = parkId1;
+  } else {
+    parkReal = parkId2;
+  }
+
    return(
     <ul>
         {
-          Object.values(trails).map(trail =>
+          Object.values(parkReal).map(trail =>
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
                 <div className="trail-item-photo">

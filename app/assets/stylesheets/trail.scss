@@ -1,0 +1,52 @@
+.trail-bg {
+    background: #f2f2f2;
+}
+
+.trail-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+    margin: auto;
+    border: 3px solid black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.trail-top {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    .trail-img {
+        width: 1024px;
+        height: 312px;
+    }
+    .trail-overlay {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid blue;
+        position: absolute;
+        top: 100px;
+        // margin-top: 190px;
+        // margin-left: 20px;
+        line-height: 1.5;
+        width: 1004px;
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.5;
+        }
+        .trail-diff {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.5;
+            // line-height: 1.33;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+}

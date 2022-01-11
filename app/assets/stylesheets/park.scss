@@ -3,38 +3,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    // padding: 0 15px;
     max-width: 1024px;
-    // align-items: center;
-    // width: 68%;
     margin: auto;
     // border: 3px solid black;
     font-family: 'Roboto', sans-serif;
 }
 
 .park-photos {
-    // border: 2px solid forestgreen;
     display: flex;
     justify-content: space-between;
-    // align-items: center;
     width: 100%;
     height: 100%;
-    // padding: 5px;
     margin-top: 5px;
-    // margin-left: 4px;
-    // margin: 3px 0;
 }
 
 .trail-image {
-    // border: 5px solid rgb(255, 0, 128);
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // display: block;
     border-radius: 8px;
-    // padding: 7px;
-    // margin-left: 14px;
-    // margin: 3px 0;
     width: 331px;
     height: 220px;
 }
@@ -60,16 +44,11 @@
 }
 
 .park-summ {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
     font-size: 17px;
     color: #414141;
     line-height: 1.33;
     padding: 0 0 20px;
     width: 750px;
-    // border: 2px solid red;
-   
 }
 
 .park-label {
@@ -86,7 +65,6 @@
     line-height: 1.33;
     margin-bottom: 16px;
     width: 750px;
-    // border: 2px solid red;
 }
 
 .park-info {
@@ -105,7 +83,6 @@
     display: flex;
     width: 100%;
     margin-bottom: 25px;
-    // border-bottom: 1px solid rgb(207, 200, 200);
 }
 
 .info-header {
@@ -146,19 +123,11 @@
     margin-bottom: 25px;
 }
 
-// delete below---------------
-
-// .trail-item-photo {
-//     border: 2px solid blue;
-// }
-
 .trail-i-content {
     // border: 2px solid blue;
     height: 85%;
     margin-left: 15px;
 }
-
-// ------------------------
 
 .trail-i-image {
     width: 288px;
@@ -173,10 +142,8 @@
     font-family: 'Roboto', sans-serif;
     line-height: 1.38;
     overflow: hidden;
-    // white-space: nowrap;
     text-overflow: ellipsis;
     h3 {
-        // display: block;
         font-size: 15px;
         font-weight: 900;
     }
@@ -188,10 +155,7 @@
 
 .diff-rating {
     display:flex;
-    // justify-content: flex-start;
     align-items: center;
-    // margin
-    // border: 2px solid purple;
 }
 
 .easy {
@@ -202,9 +166,8 @@
     color: white;
     border-radius: 6px;
     font-size: 12px;
-    width: 12%;
-    height: 20px;
-    // height: 15%;
+    width: 10%;
+    height: 18px;
 }
 
 .moderate {
@@ -215,8 +178,8 @@
     color: white;
     border-radius: 6px;
     font-size: 12px;
-    width: 12%;
-    height: 20px;
+    width: 10%;
+    height: 18px;
 }
 
 .hard {
@@ -227,9 +190,9 @@
     color: white;
     border-radius: 6px;
     font-size: 12px;
-    width: 12%;
+    width: 10%;
     // border: solid red;
-    height: 20px;
+    height: 18px;
 }
 
 .trail-length {
@@ -239,7 +202,4 @@
 
 .desc {
     font-size: 16px;
-    // overflow: hidden;
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
 }
