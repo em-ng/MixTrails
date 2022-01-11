@@ -9,6 +9,7 @@
     // width: 68%;
     margin: auto;
     border: 3px solid black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .park-photos {
@@ -36,5 +37,130 @@
     // margin: 3px 0;
     width: 331px;
     height: 220px;
+}
+
+.tiny-header {
+    color: #40531B;
+    font-weight: 700;
+    font-family: Proxima Nova, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 8px;;
+}
+
+.park-header {
+    h2 {
+        margin-top: 16px;
+        font-family: Proxima Nova, Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: #40531B;
+        padding: 0 0 8px;
+        margin: 16px 0 0;
+    }
+}
+
+.park-summ {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    font-size: 18px;
+    color: #40531B;
+    line-height: 1.33;
+    padding: 0 0 20px;
+    width: 750px;
+    // border: 2px solid red;
+   
+}
+
+.park-label {
+    font-family: Proxima Nova, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #40531B;
+    line-height: 1.33;
+    margin: 0 0 8px;
+}
+
+.park-blurb {
+    color: #40531B;
+    line-height: 1.33;
+    margin-bottom: 16px;
+    width: 750px;
+    // border: 2px solid red;
+}
+
+.park-info {
+    width: 100%;
+    border-top: 1px solid rgb(207, 200, 200);
+    h3 {
+        font-size: 22px;
+        color: #40531B;
+        font-family: Proxima Nova, Arial, sans-serif;
+        margin: 28px 0 12px;
+        font-weight: 700;
+    }
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    margin-bottom: 25px;
+    // border-bottom: 1px solid rgb(207, 200, 200);
+}
+
+.info-header {
+    margin-right: 330px;
+    font-size: 16px;
+    font-family: Proxima Nova, Arial, sans-serif;
+}
+
+.park-title {
+    line-height: 1.5;
+    font-weight: 700;
+    color: #40531B;
+}
+
+.park-text {
+    line-height: 1.7;
+    color: #536b24;
+}
+
+.trail-index-title {
+    border-top: 1px solid rgb(207, 200, 200);
+    border: 2px solid red;
+    h2 {
+        margin: 28px 0 24px;
+        font-size: 24px;
+        font-weight: 900;
+    }
+}
+
+.trail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(214, 213, 213);
+    height: 220px;
+}
+
+// delete below---------------
+
+.trail-item-photo {
+    border: 2px solid blue;
+}
+
+.trail-i-content {
+    border: 2px solid blue;
+
+}
+
+// ------------------------
+
+.trail-i-image {
+    width: 288px;
+    height: 192px;
+    border-radius: 8px;
 }
 

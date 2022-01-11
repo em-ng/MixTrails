@@ -10,14 +10,18 @@ const TrailIndexItem = ({trails}) => (
             <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
 
                 <div className="trail-item-photo">
-                  <img src={trail.photoURL} className = 'trail-image'/>
-                  
+                  <img src={trail.photoURL} className = 'trail-i-image'/> 
                 </div>
 
                 <div className="trail-i-content">
-                  <h2>#{trail.id} - {trail.name}</h2>
+                  <h3>#{trail.id} - {trail.name}</h3>
                   <p>{trail.park.name}</p>
-                  <p>{trail.difficulty}</p>
+
+                  <div className="diff-rating">
+                    <p className={`${trail.difficulty}`}>{trail.difficulty}</p>
+                    <p className="rating">Review Stars</p>
+                  </div>
+
                   <p>Length: {trail.length} mi</p>
                   <p>{trail.description}</p>
                 </div>

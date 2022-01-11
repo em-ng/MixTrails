@@ -6,7 +6,7 @@ const TrailIndex = ({trails}) => {
     
     // if(!trails) return null;
     return(
-        <div>
+        <div className="trail-index-title">
             <h2>Top trails (4)</h2>
             <TrailIndexItem trails={trails}/>
         </div>

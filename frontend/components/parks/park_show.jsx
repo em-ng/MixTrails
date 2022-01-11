@@ -57,21 +57,26 @@ class ParkShow extends React.Component {
                     <h2>Best trails in {park.name}</h2>
                 </div>
 
-                <div className='park-summ'>
-                    <p>{park.summary}</p>
+                <div>
+                    <p className="park-summ">{park.summary}</p>
+                    <p className="park-label">Description</p>
+                    <p className="park-blurb">{park.description}</p>
                 </div>
 
                 {/* <div className='map'>
 
                 </div> */}
-
                 <div className="park-info">
-                    <div>
+                    <h3>Park information</h3>
+                </div>
+
+                <div className="info">
+                    <div className="info-header">
                         <p className="park-title">Acreage:</p>
                         <p className="park-text">{park.acreage} acres</p>
 
                     </div>
-                    <div>
+                    <div className="info-header">
                         <p className="park-title">Contact:</p>
                         <p className="park-text">{park.contact}</p>
                     </div>
