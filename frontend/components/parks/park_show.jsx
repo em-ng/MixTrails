@@ -87,8 +87,6 @@ class ParkShow extends React.Component {
 
                 <TrailIndex park={park} trails={trails}/>
             </div>
-
-        
         )
     }
 }

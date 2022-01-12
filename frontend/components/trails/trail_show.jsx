@@ -20,8 +20,8 @@ class TrailShow extends React.Component {
     }
 
     render() {
-        debugger
         const { trail } = this.props;
+        // debugger
         if (!trail) return null;
         if (!trail.nearbyTrails) return null;
         return(
@@ -43,18 +43,24 @@ class TrailShow extends React.Component {
                     </div>
 
                     <div className="trail-mid">
-                        <div>
+                        <div className="button-icons">
+                            {/* map link */}
                             <FontAwesomeIcon icon={faRoute} />
-
+                            <p>Directions</p>
                         </div>
 
-                        <div>
-                            <FontAwesomeIcon icon={faPrint} />
-
+                        <div className="button-icons">
+                            <a href="javascript:window.print();">
+                                <FontAwesomeIcon icon={faPrint} />
+                                <p>Print Map</p>
+                            </a>
                         </div>
 
-                        <div>
-                            <FontAwesomeIcon icon={faShare} />
+                        <div className="button-icons">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=mixtrails.herokuapp.com">
+                                <FontAwesomeIcon icon={faShare} />
+                                <p>Share</p>
+                            </a>
                         </div>
                     </div>
 

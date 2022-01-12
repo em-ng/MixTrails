@@ -18,6 +18,9 @@
     flex-direction: column;
     color: white;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    // border: 2px solid orange;
+
     .trail-img {
         width: 1024px;
         height: 312px;
@@ -27,26 +30,25 @@
         flex-direction: column;
         border: 2px solid blue;
         position: absolute;
-        top: 100px;
-        // margin-top: 190px;
-        // margin-left: 20px;
-        line-height: 1.5;
+        top: 195px;
+        left: 20px;
+        // line-height: 1.5;
         width: 1004px;
         h2 {
             font-size: 28px;
             font-weight: 700;
             color: white;
-            line-height: 1.5;
+            // line-height: 1.5;
         }
         .trail-diff {
             display: flex;
             justify-content: space-between;
-            line-height: 1.5;
+            // line-height: 1.5;
             // line-height: 1.33;
         }
         p {
             font-size: 14px;
-            line-height: 1.5;
+            margin-top: 10px;
         }
     }
 }
