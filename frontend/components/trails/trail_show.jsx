@@ -21,7 +21,6 @@ class TrailShow extends React.Component {
 
     render() {
         const { trail } = this.props;
-        // debugger
         if (!trail) return null;
         if (!trail.nearbyTrails) return null;
         return(
@@ -44,9 +43,10 @@ class TrailShow extends React.Component {
 
                     <div className="trail-mid">
                         <div className="button-icons">
-                            {/* map link */}
-                            <FontAwesomeIcon icon={faRoute} />
-                            <p>Directions</p>
+                            <a target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${trail.lat},${trail.long}`}>
+                                <FontAwesomeIcon icon={faRoute} />
+                                <p>Directions</p>
+                            </a>
                         </div>
 
                         <div className="button-icons">
