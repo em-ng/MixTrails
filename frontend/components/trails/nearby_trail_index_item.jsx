@@ -2,24 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NearbyTrailIndexItem = ({trails}) => {
-  debugger
+  // debugger
   return (
    
     <ul>
         {
           trails.map(trail => 
-            <Link to={`/trails/${trail.id}`} key={trail.id} className="trail-item">
+            <Link to={`/trails/${trail.id}`} key={trail.id} className="nb-item">
 
-                <div className="nearby-item-photo">
-                  <img src={trail.photoURL} className = 'trail-i-image'/> 
+                <div className="nearby-box">
+                  <img src={trail.photoURL} className = "nb-image"/> 
                 
-                </div>
-
-                <div className="nearby-i-content">
-                    <h3>{trail.name}</h3>
-                    <p>{trail.park.name}</p>
-                    <p>{trail.difficulty}</p>
-                    <p>Length: {trail.length} mi</p>
+                  <div className="nb-content">
+                      <h3>{trail.name}</h3>
+                      <p>{trail.park.name}</p>
+                      <div className="diff-rating">
+                        <p className={`${trail.difficulty}`}>{trail.difficulty}</p>
+                        <p>Rating</p>
+                      </div>
+                      <p>Length: {trail.length} mi</p>
+                  </div>
                 </div>
 
             </Link>

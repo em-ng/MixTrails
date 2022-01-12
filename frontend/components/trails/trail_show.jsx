@@ -97,6 +97,10 @@ class TrailShow extends React.Component {
 
                             <div className="trail-review">
                                 <h2>Reviews</h2>
+                                <div className="reviews">
+                                    {/* iterate over review*/}
+
+                                </div>
                             </div>
 
                         </div>
