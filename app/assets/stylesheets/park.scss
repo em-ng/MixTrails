@@ -38,15 +38,16 @@
         font-size: 32px;
         font-weight: 700;
         color: #414141;
+        // color: #5A5A5A;
         padding: 0 0 8px;
-        margin: 16px 0 0;
+        margin: 18px 0 0;
     }
 }
 
 .park-summ {
     font-size: 17px;
-    color: #414141;
-    line-height: 1.33;
+    color: #5A5A5A;
+    line-height: 1.5;
     padding: 0 0 20px;
     width: 750px;
 }
@@ -56,13 +57,14 @@
     font-weight: 700;
     font-size: 18px;
     color: #414141;
+    // color: #5A5A5A;
     line-height: 1.33;
     margin: 0 0 8px;
 }
 
 .park-blurb {
     color: #5A5A5A;
-    line-height: 1.33;
+    line-height: 1.44;
     margin-bottom: 16px;
     width: 750px;
 }
@@ -207,4 +209,42 @@
 .map-park * {
     width: 763px;
     height: 240px;
+    margin: 18px 0;
+}
+
+.park-icons {
+    // background-color: #67A142;
+    // border: 2px solid orange;
+    width: 763px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 24px 0;
+    // z-index: 1;
+    .park-buttons {
+        // border: 2px solid purple;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        color: #67A142;
+        a, a:visited {
+            // border: 2px solid blue;
+            color: inherit;
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        svg {
+            background-color: white;
+            border-radius: 50%;
+            padding: 18px;
+            font-size: 22px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        p {
+            color: #67A142;
+            margin: 16px;
+        }
+    }
 }

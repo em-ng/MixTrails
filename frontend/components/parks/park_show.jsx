@@ -2,6 +2,8 @@ import React from 'react';
 import SubNav from '../nav_bar/sub_nav';
 import TrailIndex from '../trails/trail_index';
 import Map from '../maps/map';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRoute, faPrint, faShare } from "@fortawesome/free-solid-svg-icons";
 
 class ParkShow extends React.Component {
     constructor(props) {
@@ -71,6 +73,29 @@ class ParkShow extends React.Component {
 
                 <div className="map-park" >
                     <Map park={park} />
+                </div>
+
+                <div className="park-icons">
+                    <div className="park-buttons">
+                        <a target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${park.lat},${park.long}`}>
+                            <FontAwesomeIcon icon={faRoute} />
+                            <p>Directions</p>
+                        </a>
+                    </div>
+
+                    <div className="park-buttons">
+                        <a href="javascript:window.print();">
+                            <FontAwesomeIcon icon={faPrint} />
+                            <p>Print Map</p>
+                        </a>
+                    </div>
+
+                    <div className="park-buttons">
+                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=mixtrails.herokuapp.com">
+                            <FontAwesomeIcon icon={faShare} />
+                            <p>Share</p>
+                        </a>
+                    </div>
                 </div>
 
                 <div className="park-info">
