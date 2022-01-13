@@ -6,33 +6,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
-    </style>
-
-    <style>
       @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
-    </style>
-
-    <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,700&display=swap');
-    </style>
-
-    <style>
       @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;800;900&display=swap');
     </style>
 
     <script type="text/javascript">
       window.logo_url = "<%= image_url('logo.png') %>";
       window.profile_url = "<%= image_url('profile.png') %>";
     </script>
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;800;900&display=swap');
-    </style>
 
   </head>
 
