@@ -70,6 +70,8 @@ class ParkShow extends React.Component {
                 {/* <div className='map'>
 
                 </div> */}
+                {/* <Map park={park} /> */}
+
                 <div className="park-info">
                     <h3>Park information</h3>
                 </div>

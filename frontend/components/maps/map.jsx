@@ -18,7 +18,7 @@ class Map extends React.Component {
 
         const mapOptions = {
           center: center,
-          zoom: 8
+          zoom: 13
         };
     
         // wrap this.mapNode in a Google Map
@@ -26,21 +26,22 @@ class Map extends React.Component {
         // ------- above creates the outer map without marker
 
         const pos1 = new google.maps.LatLng(this.props.trail.lat, this.props.trail.long);
-        const pos2 = new google.maps.LatLng(this.props.park.lat, this.props.park.long);
+        // const pos2 = new google.maps.LatLng(this.props.park.lat, this.props.park.long);
 
-        let marker;
+        let marker; //takes in a position and map key
 
         if (this.props.trail) {
             marker = new google.maps.Marker({
                 position: pos1,
                 map: this.map
             });
-        } else {
-            marker = new google.maps.Marker({
-                position: pos2,
-                map: this.map
-            });
         }
+        // } else {
+        //     marker = new google.maps.Marker({
+        //         position: pos2,
+        //         map: this.map
+        //     });
+        // }
 
         // if (this.props.park) {
         //     marker = new google.maps.Marker({position: {lat: this.props.park.lat, lng: this.props.park.long}}),
@@ -53,7 +54,7 @@ class Map extends React.Component {
 
     render() {
         debugger
-        
+
         return(
             <div className="map" ref={ map => this.mapNode = map }>
     
