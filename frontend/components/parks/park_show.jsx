@@ -1,6 +1,7 @@
 import React from 'react';
 import SubNav from '../nav_bar/sub_nav';
 import TrailIndex from '../trails/trail_index';
+import Map from '../maps/map';
 
 class ParkShow extends React.Component {
     constructor(props) {

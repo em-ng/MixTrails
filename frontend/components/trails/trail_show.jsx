@@ -1,6 +1,7 @@
 import React from 'react';
 import NearbyTrailIndex from './nearby_trail_index';
 import SubNav from '../nav_bar/sub_nav';
+import Map from '../maps/map';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute, faPrint, faShare } from "@fortawesome/free-solid-svg-icons";
 
@@ -109,9 +110,10 @@ class TrailShow extends React.Component {
 
 
                         <div className="vertical-right">
-                            <div className="trail-map">
+                            {/* <div className="map">
 
-                            </div>
+                            </div> */}
+                            <Map trail={trail} />
 
                             <NearbyTrailIndex trails={trail.nearbyTrails} />
                         </div>
