@@ -22,6 +22,7 @@ class TrailShow extends React.Component {
 
     render() {
         const { trail } = this.props;
+        debugger
         if (!trail) return null;
         if (!trail.nearbyTrails) return null;
         return(
@@ -110,10 +111,9 @@ class TrailShow extends React.Component {
 
 
                         <div className="vertical-right">
-                            {/* <div className="map">
-
-                            </div> */}
-                            <Map trail={trail} />
+                            <div className="map-trail">
+                                <Map trail={trail} />
+                            </div>
 
                             <NearbyTrailIndex trails={trail.nearbyTrails} />
                         </div>

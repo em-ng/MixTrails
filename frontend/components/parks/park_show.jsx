@@ -25,8 +25,10 @@ class ParkShow extends React.Component {
     render() {
         // debugger
         const { park, trails } = this.props;
+        // debugger
         if (!park) return null;
         if(!trails) return null;
+        // debugger
         const pictures = Object.values(trails).slice(0, 3)
 
         return(
@@ -67,10 +69,9 @@ class ParkShow extends React.Component {
                     <p className="park-blurb">{park.description}</p>
                 </div>
 
-                {/* <div className='map'>
-
-                </div> */}
-                {/* <Map park={park} /> */}
+                <div className="map-park" >
+                    <Map park={park} />
+                </div>
 
                 <div className="park-info">
                     <h3>Park information</h3>
