@@ -22,7 +22,7 @@ class TrailShow extends React.Component {
 
     render() {
         const { trail } = this.props;
-        debugger
+        // debugger
         if (!trail) return null;
         if (!trail.nearbyTrails) return null;
         return(
