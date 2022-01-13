@@ -213,24 +213,15 @@
 }
 
 .park-icons {
-    // background-color: #67A142;
-    // border: 2px solid orange;
     width: 763px;
     display: flex;
     justify-content: space-around;
     margin: 10px 0 24px 0;
-    // z-index: 1;
     .park-buttons {
-        // border: 2px solid purple;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
         color: #67A142;
         a, a:visited {
-            // border: 2px solid blue;
             color: inherit;
             display: flex;
-            // flex-direction: column;
             align-items: center;
             justify-content: space-between;
             cursor: pointer;
