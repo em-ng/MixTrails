@@ -17,7 +17,7 @@ class Map extends React.Component {
 
         const mapOptions = {
           center: center,
-          zoom: 13
+          zoom: 8
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);

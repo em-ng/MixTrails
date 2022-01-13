@@ -1,7 +1,6 @@
 .sub-nav {
     display: flex;
     justify-content: space-between;
-    // border: 2px solid orange;
     font-family: Proxima Nova, Arial, sans-serif;
     width: 100%;
 }
@@ -10,19 +9,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: 10px;
-    // border: 2px solid blue;
     font-size: 12px;
     color: #5a5a5a;
-    // margin-left: 50px;
+    svg {
+        color: #696767;
+        padding: 0 5px;
+        font-size: 6px;
 
+    }
+    a:visited {
+        color: #5a5a5a;
+    }
+    a:hover {
+        text-decoration: underline;
+      }
 }
 
 .sub-search {
-    // border: 2px solid red;
     padding: 10px;
-    // margin-left: 280px;
-    // margin-right: 60px;
     width: 28%;
     height: 30px;
 }

@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 
 const TrailIndexItem = ({park, trails}) => {
   let parkReal;
-  // const parkId1 = Object.values(trails).slice(0, 4);
-  // const parkId2 = Object.values(trails).slice(4, 8);
-
+ 
   let parkId1 = [];
   let parkId2 = [];
 
