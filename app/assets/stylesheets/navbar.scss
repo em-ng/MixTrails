@@ -113,11 +113,19 @@
     font: Arial;
 }
 
-.title {
+.title, .dropdown-title {
     color: #618B4A;
     font-size: 14px;
     font-weight: 775;
     font-family: Arial;
+}
+
+.explore-text:hover {
+    color: #8D909B;
+}
+
+.explore-text:visited {
+    color: #618B4A;
 }
 
 .dropdown-content {
@@ -138,7 +146,7 @@
     display: block;
 }
 
-.dropdown:hover .save-text {
+.dropdown-title:hover {
     color: #8D909B;
 }
 
@@ -146,6 +154,6 @@
     background-color: #f3ebe9;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-title:hover .dropdown-content {
     display: block;
 }

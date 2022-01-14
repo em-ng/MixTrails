@@ -21,10 +21,11 @@ const NavBar = ({ currentUser, logout }) => {
               
             <div className="dropdown">
                 <div className="title">
-                    <span className="explore-text">Explore</span>
+                    {/* <span className="explore-text">Explore</span> */}
+                    <a className="explore-text" target="_blank" href="https://goo.gl/maps/Nt2CiSTFUeqio4EN6">Explore</a>
                 </div>
 
-                <div className="title" >
+                <div className="dropdown-title" >
                     <span className="save-text">Saved</span>
                     <div className="dropdown-content">
                         <Link to="/signup">My favorites</Link>
@@ -36,9 +37,9 @@ const NavBar = ({ currentUser, logout }) => {
                     </div>
                 </div>
 
-                <div className="title">
+                {/* <div className="title">
                     <span className="shop-text">Shop</span>
-                </div>
+                </div> */}
 
             </div>
 
