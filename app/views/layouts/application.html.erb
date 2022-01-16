@@ -9,8 +9,8 @@
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('logo.png')%>
    
-
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
