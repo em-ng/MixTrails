@@ -19,7 +19,7 @@ const Footer = () => {
 
                 <div className="footer-links">
                     <a className="icon" href="https://github.com/em-ng"><FontAwesomeIcon icon={["fab", "github-alt"]} /></a>
-                    <a className="icon" href="https://www.linkedin.com/in/emily-n-8a9822204/"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></a>
+                    <a className="icon" href="https://www.linkedin.com/in/em-ng/"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></a>
                 </div>
             </div>
         </footer>
