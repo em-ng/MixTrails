@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Map extends React.Component {
     constructor(props) {
@@ -6,6 +7,7 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
+        // debugger
         let center;
         if (this.props.park) {
             center = { lat: this.props.park.lat, lng: this.props.park.long };
@@ -15,7 +17,8 @@ class Map extends React.Component {
 
         const mapOptions = {
           center: center,
-          zoom: 8
+          zoom: 8,
+          gestureHandling: "greedy"
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -47,4 +50,4 @@ class Map extends React.Component {
     }
 }
 
-export default Map;
+export default withRouter(Map);

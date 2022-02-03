@@ -60,10 +60,10 @@ class ParkShow extends React.Component {
                     <p className="park-blurb">{park.description}</p>
                 </div>
 
-                <div className="map-park" >
+                <div className="map-park">
                     <Map park={park} />
                 </div>
-
+             
                 <div className="park-icons">
                     <div className="park-buttons">
                         <a target="_blank" href={`https://www.google.com/maps/dir/Current+Location/${park.lat},${park.long}`}>

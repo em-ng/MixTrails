@@ -111,10 +111,11 @@ class TrailShow extends React.Component {
 
 
                         <div className="vertical-right">
+
                             <div className="map-trail">
                                 <Map trail={trail} />
                             </div>
-
+                    
                             <NearbyTrailIndex trails={trail.nearbyTrails} />
                         </div>
 
