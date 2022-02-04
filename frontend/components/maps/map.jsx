@@ -7,7 +7,6 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         let center;
         if (this.props.park) {
             center = { lat: this.props.park.lat, lng: this.props.park.long };

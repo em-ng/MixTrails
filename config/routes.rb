@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :parks, only: [:show] do
       resources :trails, only: [:index]
     end
+
+    resources :parks, only: [:index]
     
   end
 
