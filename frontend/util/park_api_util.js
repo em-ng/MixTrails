@@ -13,3 +13,10 @@ export const fetchTrails = parkId => {
         url: `/api/parks/${parkId}/trails`
     })
 }
+
+export const fetchParks = () => {
+    return $.ajax({
+        method: 'get',
+        url: '/api/parks'
+    })
+}
