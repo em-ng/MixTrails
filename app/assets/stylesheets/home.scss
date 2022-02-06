@@ -6,6 +6,7 @@
     background-size: contain;
     -webkit-background-size: cover;
     background-position: 50% 50%;
+    // z-index: 100;
 }
 
 .home-content {
@@ -23,7 +24,7 @@
     text-shadow: 2px 1px #ddd4d1;
 }
 
-.search-box {
+.search-bar {
     // border: 2px solid orange;
     height: 80px;
     width: 800px;

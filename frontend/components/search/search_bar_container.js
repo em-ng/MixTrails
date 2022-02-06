@@ -9,6 +9,7 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
+    debugger
     return {
         fetchParks: () => dispatch(fetchParks())
     }

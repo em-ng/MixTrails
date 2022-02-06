@@ -7,6 +7,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import HomeContainer from './home/home_container';
 import ParkShowContainer from './parks/park_show_container';
 import TrailShowContainer from './trails/trail_show_container';
+// import SearchBarContainer from './search/search_bar_container';
 import Footer from './footer/footer';
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
         <AuthRoute path='/login' component={LoginFormContainer} />
         <Route path='/parks/:parkId' component={ParkShowContainer} />
         <Route path='/trails/:trailId' component={TrailShowContainer} />
+        {/* <Route exact path='/' component={SearchBarContainer} /> */}
         <Route exact path='/' component={HomeContainer}/>
     </Switch>
     <footer>

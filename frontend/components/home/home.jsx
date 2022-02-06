@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBarContainer from '../search/search_bar_container';
 
 const Home = ({ currentUser }) => {
     const text = (currentUser ? (
@@ -15,9 +16,10 @@ const Home = ({ currentUser }) => {
             <div className="home-background">
                 <div className="home-content">
                     {text}
-                    <div className="search-bar">
-                        <input className="search-box" type="text" placeholder="Search by city, park, or trail name" />
-                    </div>
+                    {/* <div className="search-bar"> */}
+                        {/* <input className="search-box" type="text" placeholder="Search by city, park, or trail name" /> */}
+                    <SearchBarContainer />
+                    {/* </div> */}
                 </div>
             </div>
 
