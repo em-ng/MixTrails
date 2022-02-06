@@ -26,14 +26,6 @@ class SearchBar extends React.Component {
     //     const newFilter = Object.value(this.props.parks).filter.map
     // }
 
-    // toPark(id){
-    //     this.props.history.push(`/parks/${id}`)
-    // }
-
-    // toTrail(id){
-    //     this.props.history.push(`/trails/${id}`)
-    // }
-
     update(e) {
         this.setState({search: e.target.value})
     }
@@ -61,7 +53,7 @@ class SearchBar extends React.Component {
                 <div className="search-input">
                     <FontAwesomeIcon icon={faSearch} />
                     <input
-                    // className="search"
+                    // className="search-box"
                     type="text"
                     placeholder="Search by park or trail name"
                     onChange={this.update}
@@ -80,6 +72,7 @@ class SearchBar extends React.Component {
                                 return(
                                     <li key={idx}>
                                         <Link to={`/parks/${park.id}`}>{park.name}
+                                            <p className="subtext">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
                                         </Link>
                                     </li>
                                 )
@@ -91,6 +84,7 @@ class SearchBar extends React.Component {
                                 return(
                                     <li key={idx}>
                                         <Link to={`/trails/${trail.id}`}>{trail.name}
+                                            <p className="subtext">{trail.park_id === 1 ? "Franconia Notch State Park, New Hampshire, " : "Acadia National Park, Maine, "}United States of America</p>
                                         </Link>
                                     </li>
                                 )

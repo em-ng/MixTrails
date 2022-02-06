@@ -1,3 +1,11 @@
-.hidden {
-    display: none;
+.search-bar {
+    border: none;
+    position: relative;
+    box-shadow: 0 2px 24px 0 #ddd4d1;
+    padding: 0 16px;
+    height: 72px;
+    width: 644px;
+    margin-top: 30px;
+    border-radius: 40px;
+    background-color: white;
 }
