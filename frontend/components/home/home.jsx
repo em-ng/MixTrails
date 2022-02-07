@@ -14,13 +14,13 @@ const Home = ({ currentUser }) => {
     return(
         <div className="homepage">
             <div className="home-background">
-                <div className="home-content">
+                {/* <div className="home-content"> */}
                     {text}
                     {/* <div className="search-bar"> */}
                         {/* <input className="search-box" type="text" placeholder="Search by city, park, or trail name" /> */}
-                    <SearchBarContainer />
                     {/* </div> */}
-                </div>
+                {/* </div> */}
+                <SearchBarContainer />
             </div>
 
             <div className="home-text">

@@ -7,14 +7,18 @@
     -webkit-background-size: cover;
     background-position: 50% 50%;
     z-index: -1;
-}
-
-.home-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Bitter', serif;
 }
+
+// .home-content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-family: 'Bitter', serif;
+// }
 
 .header {
     // border: 2px solid orange;
@@ -37,6 +41,7 @@
     align-items: center;
     color: #618b4a;
     font-family: 'Be Vietnam Pro', sans-serif;
+
     h1 {
         font-size: 73px;
         font-weight: 600;

@@ -70,15 +70,14 @@ class SearchBar extends React.Component {
                         {parksArr.map((park, idx) => {
                             if (park.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                                 return(
-                                    <li className="search-li" key={idx}>
-                                        <Link to={`/parks/${park.id}`}>
+                                    <li key={idx}>
+                                        <Link className="search-link" to={`/parks/${park.id}`}>
                                             <FontAwesomeIcon className="dropdown-icon" icon={faTree} />
                                             <div>
                                                 <p className-="subtitle">{park.name}</p>
                                                 <p className="subtext">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
                                             </div>
                                         </Link>
-                                        <hr />
                                     </li>
                                 )
                             }
@@ -87,15 +86,14 @@ class SearchBar extends React.Component {
                         {trailsArr.map((trail, idx) => {
                             if (trail.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                                 return(
-                                    <li className="search-li" key={idx}>
-                                        <Link to={`/trails/${trail.id}`}>
+                                    <li key={idx}>
+                                        <Link className="search-link" to={`/trails/${trail.id}`}>
                                             <FontAwesomeIcon className="dropdown-icon" icon={faMapMarkerAlt} />
                                             <div>
                                                 <p className="subtitle">{trail.name}</p>
                                                 <p className="subtext">{trail.park_id === 1 ? "Franconia Notch State Park, New Hampshire, " : "Acadia National Park, Maine, "}United States of America</p>
                                             </div>
                                         </Link>
-                                        <hr />
                                     </li>
                                 )
                             }
