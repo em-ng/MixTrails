@@ -71,7 +71,7 @@ class SearchBar extends React.Component {
                             if (park.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                                 return(
                                     <li key={idx}>
-                                        <Link className="search-link" to={`/parks/${park.id}`}>
+                                        <Link to={`/parks/${park.id}`}>
                                             <FontAwesomeIcon className="dropdown-icon" icon={faTree} />
                                             <div>
                                                 <p className-="subtitle">{park.name}</p>
@@ -87,7 +87,7 @@ class SearchBar extends React.Component {
                             if (trail.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                                 return(
                                     <li key={idx}>
-                                        <Link className="search-link" to={`/trails/${trail.id}`}>
+                                        <Link to={`/trails/${trail.id}`}>
                                             <FontAwesomeIcon className="dropdown-icon" icon={faMapMarkerAlt} />
                                             <div>
                                                 <p className="subtitle">{trail.name}</p>
