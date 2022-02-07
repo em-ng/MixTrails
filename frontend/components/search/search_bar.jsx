@@ -60,7 +60,7 @@ class SearchBar extends React.Component {
                     onFocus={this.handleHidden}
                     onBlur={this.handleHidden}
                     />
-                    <FontAwesomeIcon icon={faArrowCircleRight} />
+                    <FontAwesomeIcon className="arrow" icon={faArrowCircleRight} />
                 </div>  
 
 
@@ -70,15 +70,15 @@ class SearchBar extends React.Component {
                         {parksArr.map((park, idx) => {
                             if (park.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                                 return(
-                                    <li key={idx}>
+                                    <li className="search-li" key={idx}>
                                         <Link to={`/parks/${park.id}`}>
                                             <FontAwesomeIcon className="dropdown-icon" icon={faTree} />
                                             <div>
-                                                {park.name}
+                                                <p className-="subtitle">{park.name}</p>
                                                 <p className="subtext">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
                                             </div>
                                         </Link>
-
+                                        <hr />
                                     </li>
                                 )
                             }
@@ -87,14 +87,15 @@ class SearchBar extends React.Component {
                         {trailsArr.map((trail, idx) => {
                             if (trail.name.toLowerCase().includes(this.state.search.toLowerCase())) {
                                 return(
-                                    <li key={idx}>
+                                    <li className="search-li" key={idx}>
                                         <Link to={`/trails/${trail.id}`}>
                                             <FontAwesomeIcon className="dropdown-icon" icon={faMapMarkerAlt} />
                                             <div>
-                                                {trail.name}
+                                                <p className="subtitle">{trail.name}</p>
                                                 <p className="subtext">{trail.park_id === 1 ? "Franconia Notch State Park, New Hampshire, " : "Acadia National Park, Maine, "}United States of America</p>
                                             </div>
                                         </Link>
+                                        <hr />
                                     </li>
                                 )
                             }
