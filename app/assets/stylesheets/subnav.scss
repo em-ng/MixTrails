@@ -67,14 +67,9 @@
     background-color: white;
     input {
         border: none;
-        // border: 2px solid orange;
         width: 270px;
         padding: 0 8px;
         font-size: 12px;
-        // line-height: 1.33;
-        // padding: 14px 0;
-        // margin: 0 16px;
-        // z-index: -1;
     }
     input:focus {
         outline: none;
@@ -112,9 +107,7 @@
             padding: 3.5px 7px;
             width: 293px;
             // width: 313px;
-            height: 40px;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
+            height: 42px;
             svg {
                 border-radius: 3px;
                 font-size: 16px;
@@ -132,12 +125,8 @@
             div {
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-between;
                 align-items: center;
-                // border: 2px solid fuchsia;
-                // padding: 0 16px;
                 line-height: 1.33;
-                // height: 40px;
                 padding-left: 7px;
                 p {
                     width: 245px;
@@ -153,9 +142,6 @@
                 .show-text {
                     font-size: 11px;
                 }
-                // p:hover {
-                //     color: white;
-                // }
             }
         }
         a:hover {
@@ -163,14 +149,14 @@
             svg {
                 background-color: white;
             }
+            p {
+                color: white;
+            }
             .seed {
                 color: #f49b31
             }
             .sign {
                 color: #67a142
-            }
-            p {
-                color: white;
             }
         }
         a:visited {
