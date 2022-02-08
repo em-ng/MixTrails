@@ -70,9 +70,9 @@ class SearchBar extends React.Component {
                                 return(
                                     <li key={idx}>
                                         <Link to={`/parks/${park.id}`}>
-                                            <FontAwesomeIcon className="dropdown-icon" icon={faSeedling} />
+                                            <FontAwesomeIcon className="seed" icon={faSeedling} />
                                             <div>
-                                                <p className-="show-title">{park.name}</p>
+                                                <p className="show-title">{park.name}</p>
                                                 <p className="show-text">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
                                             </div>
                                         </Link>
@@ -86,7 +86,7 @@ class SearchBar extends React.Component {
                                 return(
                                     <li key={idx}>
                                         <Link to={`/trails/${trail.id}`}>
-                                            <FontAwesomeIcon className="dropdown-icon" icon={faMapSigns} />
+                                            <FontAwesomeIcon className="sign" icon={faMapSigns} />
                                             <div>
                                                 <p className="show-title">{trail.name}</p>
                                                 <p className="show-text">{trail.park_id === 1 ? "Franconia Notch State Park, New Hampshire, " : "Acadia National Park, Maine, "}United States of America</p>
@@ -125,7 +125,7 @@ class SearchBar extends React.Component {
                                 return(
                                     <li key={idx}>
                                         <Link to={`/parks/${park.id}`}>
-                                            <FontAwesomeIcon className="dropdown-icon" icon={faTree} />
+                                            <FontAwesomeIcon icon={faTree} />
                                             <div>
                                                 <p className-="subtitle">{park.name}</p>
                                                 <p className="subtext">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
@@ -141,7 +141,7 @@ class SearchBar extends React.Component {
                                 return(
                                     <li key={idx}>
                                         <Link to={`/trails/${trail.id}`}>
-                                            <FontAwesomeIcon className="dropdown-icon" icon={faMapMarkerAlt} />
+                                            <FontAwesomeIcon icon={faMapMarkerAlt} />
                                             <div>
                                                 <p className="subtitle">{trail.name}</p>
                                                 <p className="subtext">{trail.park_id === 1 ? "Franconia Notch State Park, New Hampshire, " : "Acadia National Park, Maine, "}United States of America</p>
