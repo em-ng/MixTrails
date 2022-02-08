@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  activity_date: 2022-02-08
+  review_text: MyText
+  user_id: 1
+  trail_id: 1
+
+two:
+  rating: 1
+  activity_date: 2022-02-08
+  review_text: MyText
+  user_id: 1
+  trail_id: 1
