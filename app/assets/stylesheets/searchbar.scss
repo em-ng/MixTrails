@@ -38,6 +38,9 @@
     .arrow {
         cursor: pointer;
     }
+    .arrow:hover {
+        color: #749761;
+    }
     input {
         border: none;
         // border: 2px solid orange;
@@ -51,10 +54,6 @@
     input:focus {
         outline: none;
     }
-    // input:active {
-    //     font-weight: 700;
-
-    // }
 }
 
 .search-results {
