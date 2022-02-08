@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchBarContainer from '../search/search_bar_container';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,9 +20,11 @@ class SubNav extends React.Component {
                     <p><Link to={`/parks/${this.props.park.id}`}>{this.props.park.name}</Link></p>
                 </div>
 
-                <div className="sub-search">
+                <SearchBarContainer type="show-page" />
+
+                {/* <div className="sub-search">
                     <input className="tiny-search" type="text" placeholder='Enter a city, park or trail name' />
-                </div>
+                </div> */}
             </div>
 
         )

@@ -1,8 +1,10 @@
 .sub-nav {
     display: flex;
     justify-content: space-between;
+    // align-items: center;
     font-family: Proxima Nova, Arial, sans-serif;
     width: 100%;
+    border: 2px solid orange;
 }
 
 .location {
@@ -11,6 +13,7 @@
     align-items: center;
     font-size: 12px;
     color: #5a5a5a;
+    border: 2px solid purple;
     svg {
         color: #696767;
         padding: 0 5px;
@@ -25,17 +28,156 @@
       }
 }
 
+// .sub-search {
+//     padding: 10px;
+//     width: 28%;
+//     height: 30px;
+// }
+// .tiny-search {
+//     border: 1px solid #e6e6e6;
+//     border-radius: 8px;
+//     width: 100%;
+//     min-height: 100%;
+//     ::placeholder {
+//         color: #414141;
+//     }
+// }
+
+//-------------------------------
+
 .sub-search {
-    padding: 10px;
-    width: 28%;
-    height: 30px;
+    padding: 10px 0;
+    width: 326px;
+    height: 36px;
+    // background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
-.tiny-search {
+
+.sub-input {
+    // padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 326px;
+    height: 36px;
     border: 1px solid #e6e6e6;
     border-radius: 8px;
-    width: 100%;
-    min-height: 100%;
-    ::placeholder {
-        color: #414141;
+    // position: relative;
+    // width: 100%;
+    // min-height: 100%;
+    // ::placeholder {
+    //     color: #414141;
+    // }
+    // z-index: 10;
+    // border-radius: 40px;
+    // box-shadow: 0 2px 24px 0 #ddd4d1;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    // border: 2px solid fuchsia;
+    // margin: 10px 0;
+    background-color: white;
+    input {
+        // border: none;
+        width: 263px;
+        border: 2px solid orange;
+        font-size: 12px;
+        // line-height: 1.33;
+        // padding: 14px 0;
+        // margin: 0 16px;
+        // z-index: -1;
     }
+    svg {
+        color: white;
+        padding: 0 12px;
+        font-size: 16px;
+        border-radius: 0 8px 8px 0;
+        // z-index: 10;
+        width: 26px;
+        height: 36px;
+        background-color: #67a142;
+        // border: 2px solid purple;
+    }
+}
+
+.sub-results {
+    border: 2px solid blue;
+    background-color: white;
+    position: absolute;
+    width: 644px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    box-shadow: 0 2px 24px 0 #ddd4d1;
+    margin-top: -50px;
+    height: 240px;
+    // padding: 0 16px;
+    padding-top: 60px;
+    // overflow: hidden;
+    overflow-y: auto;
+    z-index: 2;
+    li {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // padding: 0 16px;
+        border-bottom: 1px solid #e6e6e6;
+        // width: 612px;
+        // border: 2px solid blue;
+        a {
+            display: flex;
+            height: 71px;
+            justify-content: flex-start;
+            align-items: center;
+            // border: 2px solid orangered;
+            width: 612px;
+            // width: 100%;
+            // padding-left: 16px;
+            svg {
+                background-color: rgb(242, 242, 242);
+                border-radius: 50%;
+                font-size: 30px;
+                padding: 10px;
+                height: 20px;
+                width: 20px;
+                color: #618b4a;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                // border: 2px solid fuchsia;
+                padding: 0 16px;
+                line-height: 1.33;
+                .subtitle {
+                    font-size: 18px;
+                    color: #414141;
+                }
+                .subtext {
+                    font-size: 12px;
+                    color: #414141;
+                }
+            }
+        }
+        a:hover {
+            background-color: rgb(242, 242, 242);
+            svg {
+                background-color: white;
+            }
+        }
+        a:visited {
+            color: #414141;
+        }
+    }
+}
+
+.search-results:hover {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faArrowCircleRight, faTree, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faArrowCircleRight, faTree, faMapMarkerAlt, faMapSigns, faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -47,6 +47,59 @@ class SearchBar extends React.Component {
                 trailsArr.push(trail)
             })
         })
+
+        if (this.props.type === "show-page" ) {
+            return (
+                <div className="sub-search">
+                    <div className="sub-input">
+                        <input
+                        type="text"
+                        placeholder="Enter a park or trail name"
+                        onChange={this.update}
+                        onFocus={this.handleHidden}
+                        onBlur={this.handleHidden}
+                        />
+                        <FontAwesomeIcon icon={faSearch} />
+                    </div>
+
+
+                    <div className={this.state.visibility === "hidden" ? "sub-results hidden" : "sub-results" }>
+                
+                        {parksArr.map((park, idx) => {
+                            if (park.name.toLowerCase().includes(this.state.search.toLowerCase())) {
+                                return(
+                                    <li key={idx}>
+                                        <Link to={`/parks/${park.id}`}>
+                                            <FontAwesomeIcon className="dropdown-icon" icon={faSeedling} />
+                                            <div>
+                                                <p className-="show-title">{park.name}</p>
+                                                <p className="show-text">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                )
+                            }
+                        })}
+                            
+                        {trailsArr.map((trail, idx) => {
+                            if (trail.name.toLowerCase().includes(this.state.search.toLowerCase())) {
+                                return(
+                                    <li key={idx}>
+                                        <Link to={`/trails/${trail.id}`}>
+                                            <FontAwesomeIcon className="dropdown-icon" icon={faMapSigns} />
+                                            <div>
+                                                <p className="show-title">{trail.name}</p>
+                                                <p className="show-text">{trail.park_id === 1 ? "Franconia Notch State Park, New Hampshire, " : "Acadia National Park, Maine, "}United States of America</p>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                )
+                            }
+                        })}  
+                    </div>
+                </div>
+            )
+        }
 
         return(
             <div className="search-bar">
