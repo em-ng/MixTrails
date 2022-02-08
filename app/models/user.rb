@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :reviews
     
     validates :firstname, :lastname, :password_digest, presence: true
     validates :email, :session_token, presence: true, uniqueness: true

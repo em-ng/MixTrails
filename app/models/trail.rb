@@ -1,4 +1,5 @@
 class Trail < ApplicationRecord
+    has_many :reviews
 
     validates :name, :description, :summary, :length, :elevation, :lat, :long, presence: true
     validates :difficulty, inclusion: %w(easy moderate hard)
@@ -10,5 +11,4 @@ class Trail < ApplicationRecord
     class_name: :Park
 
     has_one_attached :photo
-    # has_one_attached :map_photo
 end
