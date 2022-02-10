@@ -7,13 +7,11 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
 
     resources :trails, only: [:show]
+    resources :parks, only: [:index]
+    resources :reviews, only: [:create, :update, :destroy]
 
     resources :parks, only: [:show] do
       resources :trails, only: [:index]
     end
-
-    resources :parks, only: [:index]
-    
   end
-
 end

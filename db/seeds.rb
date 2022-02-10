@@ -90,3 +90,36 @@ trail8 = Trail.create(name: "Ocean Path Trail",
                       lat: 44.32985, long: -68.18432, park_id: park2.id)
 trail8_photo = URI.open("https://mixtrails-seeds.s3.amazonaws.com/trail8.jpg")
 trail8.photo.attach(io: trail8_photo, filename: "trail8.jpg")
+
+Review.destroy_all
+review1 = Review.create(rating: 5, review_text: "Difficult, but worth every second", activity_date: "2021-10-05", user_id: user2.id, trail_id: trail1.id)
+review2 = Review.create(rating: 3, review_text: "Tough hike, not for the weak minded", activity_date: "2021-08-17", user_id: user1.id, trail_id: trail1.id)
+review3 = Review.create(rating: 5, review_text: "Great hike, recommend doing this hike counter clockwise", activity_date: "2021-06-12", user_id: user3.id, trail_id: trail1.id)
+
+review4 = Review.create(rating: 4, review_text: "Easy hike, very dog friendly", activity_date: "2022-01-12", user_id: user3.id, trail_id: trail2.id)
+review5 = Review.create(rating: 5, review_text: "Beautiful fall foliage", activity_date: "2021-11-12", user_id: user1.id, trail_id: trail2.id)
+review6 = Review.create(rating: 5, review_text: "Breathtaking views, my whole family enjoyed the hike a lot.", activity_date: "2021-07-04", user_id: user2.id, trail_id: trail2.id)
+
+review7 = Review.create(rating: 4, review_text: "Easy hike, very dog friendly", activity_date: "2022-01-12", user_id: user3.id, trail_id: trail3.id)
+review8 = Review.create(rating: 5, review_text: "Beautiful fall foliage", activity_date: "2021-11-12", user_id: user1.id, trail_id: trail3.id)
+review9 = Review.create(rating: 5, review_text: "Breathtaking views, my whole family enjoyed the hike a lot.", activity_date: "2021-07-04", user_id: user2.id, trail_id: trail3.id)
+
+review10 = Review.create(rating: 4, review_text: "Easy hike, suitable for all ages", activity_date: "2022-01-11", user_id: user3.id, trail_id: trail4.id)
+review11 = Review.create(rating: 2, review_text: "Roads were icy and hard to walk on. Slip and fell a few times", activity_date: "2021-03-12", user_id: user1.id, trail_id: trail4.id)
+review12 = Review.create(rating: 5, review_text: "Beautiful waterfalls, definitely recommend coming during warmer months", activity_date: "2021-10-04", user_id: user2.id, trail_id: trail4.id)
+
+review13 = Review.create(rating: 4, review_text: "Wish I did this hike during the summer, too chilly in the winter.", activity_date: "2021-12-03", user_id: user3.id, trail_id: trail5.id)
+review14 = Review.create(rating: 5, review_text: "10/10 recommend this hike, good vibes, good company.", activity_date: "2021-10-12", user_id: user1.id, trail_id: trail5.id)
+review15 = Review.create(rating: 5, review_text: "Love this hike, been wanting to come here since forever. Will definitely try to make a organize a camping trip just to come back.", activity_date: "2021-06-24", user_id: user2.id, trail_id: trail5.id)
+
+review16 = Review.create(rating: 2, review_text: "Very rocky, not dog friendly at all", activity_date: "2022-02-05", user_id: user2.id, trail_id: trail6.id)
+review17 = Review.create(rating: 3, review_text: "Make sure to wear long pants, lots of sharp rocks and prickly bushes along the way", activity_date: "2021-08-17", user_id: user1.id, trail_id: trail6.id)
+review18 = Review.create(rating: 5, review_text: "Nice scenery, the weather was perfect for the hike", activity_date: "2021-07-12", user_id: user3.id, trail_id: trail6.id)
+
+review19 = Review.create(rating: 5, review_text: "Nice scramble to the top", activity_date: "2021-05-23", user_id: user2.id, trail_id: trail7.id)
+review20 = Review.create(rating: 4, review_text: "Very enjoyable hike, a bit steep but lots of fun nonetheless", activity_date: "2021-04-17", user_id: user1.id, trail_id: trail7.id)
+review21 = Review.create(rating: 3, review_text: "My dog almost fell off the cliff, make sure to buy some paw wax!!", activity_date: "2021-03-12", user_id: user3.id, trail_id: trail7.id)
+
+review22 = Review.create(rating: 5, review_text: "Nice breeze from the ocean as you're walking along the trail", activity_date: "2021-11-25", user_id: user2.id, trail_id: trail8.id)
+review23 = Review.create(rating: 4, review_text: "Beautiful scenery, probably better to come during warmer months", activity_date: "2021-11-01", user_id: user1.id, trail_id: trail8.id)
+review24 = Review.create(rating: 5, review_text: "Soothing hike as you hear the waves crash against the shore", activity_date: "2021-09-13", user_id: user3.id, trail_id: trail8.id)
