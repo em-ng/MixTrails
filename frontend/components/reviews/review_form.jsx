@@ -3,9 +3,7 @@ import React from 'react';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            review: this.props.review
-        }
+        this.state = this.props.review;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -30,7 +28,7 @@ class ReviewForm extends React.Component {
                     value={this.state.review_text}
                     onChange={this.update('review_text')}
                 />
-                <input type="submit" name="Post"/>
+                <input type="submit" value="Post"/>
             </form>
         )
     }

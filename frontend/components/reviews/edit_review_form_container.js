@@ -6,8 +6,8 @@ import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
     return {
-        review: state.reviews[ownProps.match.params.reviewId],
-        formType: 'Update Review'
+        review: state.reviews[ownProps.match.params.reviewId]
+        // formType: 'Update Review'
     }
 }
 
@@ -19,24 +19,25 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(ReviewForm);
+class EditReviewForm extends React.Component {
+    componentDidMount() {
+        this.props.review
+    }
 
-// class EditReviewForm extends React.Component {
-//     componentDidMount {
+    render() {
+        const { action, review } = this.props;
 
-//     }
+        if (!review) return null;
 
-//     render() {
-//         const { action, formType, review } = this.props;
+        return(
+            <ReviewForm
+                action = {action}
+                // formType = {formType}
+                review={review}
+            />
+        )
+    }
+}
 
-//         if (!review) return null;
+export default connect(mSTP, mDTP)(EditReviewForm);
 
-//         return(
-//             <ReviewForm
-//                 action = {action}
-//                 formType = {formType}
-//                 review={review}
-//             />
-//         )
-//     }
-// }

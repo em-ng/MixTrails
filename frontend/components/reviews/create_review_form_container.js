@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
             user_id: state.session.currentUserId,
             trail_id: ownProps.match.params.trailId
         },
-        formType: 'Create Review',
+        // formType: 'Create Review',
         user: state.session.currentUserId,
         trail: state.entities.trails[ownProps.match.params.trailId]
     }

@@ -20,7 +20,6 @@ const App = () => (
         <AuthRoute path='/login' component={LoginFormContainer} />
         <Route path='/parks/:parkId' component={ParkShowContainer} />
         <Route path='/trails/:trailId' component={TrailShowContainer} />
-        {/* <Route exact path='/' component={SearchBarContainer} /> */}
         <Route exact path='/' component={HomeContainer}/>
     </Switch>
     <footer>
