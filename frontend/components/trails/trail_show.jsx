@@ -22,6 +22,14 @@ class TrailShow extends React.Component {
         }
     }
 
+    openModal(modal){
+        if (this.props.currentUser) {
+            this.props.openModal(modal)
+        } else {
+            this.props.history.push('/login')
+        }
+    }
+
     render() {
         const { trail, currentUser } = this.props;
         if (!trail) return null;
