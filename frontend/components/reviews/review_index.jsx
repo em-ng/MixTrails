@@ -20,6 +20,7 @@ const ReviewIndex = ({reviews, currentUser}) => {
                         <div>
                             {/* above class in reg direction */}
                             <ReactStars
+                                count={5}
                                 size={20}
                                 isHalf={true}
                                 edit={false}

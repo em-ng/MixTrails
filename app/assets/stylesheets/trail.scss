@@ -42,13 +42,23 @@
         }
         .trail-diff {
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
+            justify-content: flex-start;
+            // justify-content: center;
+            align-items: center;
+            // margin-right: 5px;
+            // border: 2px solid orange;
             // line-height: 1.5;
-            // line-height: 1.33;
+            line-height: 1.33;
+            p {
+                font-size: 12px;
+            }
+            span {
+                margin-left: 5px;
+            }
         }
-        p {
-            font-size: 14px;
-            margin-top: 10px;
+        .park-name {
+            margin-top: 4px;
         }
     }
 }

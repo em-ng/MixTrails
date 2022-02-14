@@ -1,5 +1,6 @@
 import React from 'react';
 import NearbyTrailIndex from './nearby_trail_index';
+import ReactStars from 'react-rating-stars-component';
 // import ReviewIndex from '../reviews/review_index';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import SubNav from '../nav_bar/sub_nav';
@@ -35,7 +36,13 @@ class TrailShow extends React.Component {
         if (!trail) return null;
         if (!trail.reviews) return null;
         if (!trail.nearbyTrails) return null;
-        debugger
+        
+        let avgRating = 0;
+        trail.reviews.forEach(review => {
+            avgRating += review.rating
+        })
+        avgRating = (avgRating / (trail.reviews.length));
+
         return(
             <div className="trail-bg">
                 <div className="trail-show">
@@ -49,8 +56,15 @@ class TrailShow extends React.Component {
                             <div className="trail-diff">
                                 <p className={`${trail.difficulty}`}>{trail.difficulty}</p>
                                 {/* <p>Ratings</p> */}
+                                <ReactStars
+                                count={5}
+                                size={20}
+                                isHalf={true}
+                                edit={false}
+                                value={avgRating}
+                                />
                             </div>
-                            <p>{trail.park.name}</p>
+                            <p className="park-name">{trail.park.name}</p>
                         </div>
                     </div>
 
