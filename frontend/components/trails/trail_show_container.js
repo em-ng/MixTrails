@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchTrail } from '../../actions/trail_actions';
+import { openModal } from '../../actions/modal_actions';
 import TrailShow from './trail_show';
 
 const mSTP = (state, ownProps) => {
@@ -11,7 +12,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        fetchTrail: trailId => dispatch(fetchTrail(trailId))
+        fetchTrail: trailId => dispatch(fetchTrail(trailId)),
+        openModal: modal => dispatch(openModal(modal))
     }
 }
 
