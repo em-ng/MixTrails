@@ -7,8 +7,8 @@ import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
     return {
-        review: state.reviews[ownProps.match.params.reviewId]
-        // formType: 'Update Review'
+        review: state.reviews[ownProps.match.params.reviewId],
+        formType: 'update'
     }
 }
 

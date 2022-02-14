@@ -8,6 +8,7 @@ class Api::ReviewsController < ApplicationController
             render :show
         else
             render json: @review.errors.full_messages, status: 422
+        end
     end
 
     def update
@@ -30,6 +31,6 @@ class Api::ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:rating, :activity_date, :review_text)
+        params.require(:review).permit(:rating, :activity_date, :review_text, :user_id, :trail_id)
     end
 end

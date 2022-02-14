@@ -8,13 +8,13 @@ const mSTP = (state, ownProps) => {
     debugger
     return {
         review: {
-            rating: null,
+            rating: 0,
             activity_date: new Date().toString(),
             review_text: '',
             user_id: state.session.currentUserId,
             trail_id: ownProps.match.params.trailId
         },
-        // formType: 'Create Review',
+        formType: 'create',
         user: state.session.currentUserId,
         trail: state.entities.trails[ownProps.match.params.trailId]
     }
