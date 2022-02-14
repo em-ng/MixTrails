@@ -49,6 +49,7 @@ class TrailShow extends React.Component {
 
         return(
             <div className="trail-bg">
+                <Modal />
                 <div className="trail-show">
                     {/* flex above class inner two-divs in column direction (trail top and trail bott) */}
                     <SubNav park={trail.park}/>

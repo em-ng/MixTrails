@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import ReviewForm from './review_form';
 import { createReview } from '../../actions/review_actions';
 import { closeModal } from '../../actions/modal_actions';
@@ -27,4 +28,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(ReviewForm);
+export default withRouter(connect(mSTP, mDTP)(ReviewForm));

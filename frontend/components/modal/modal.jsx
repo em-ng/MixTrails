@@ -6,13 +6,11 @@ import CreateReviewContainer from '../reviews/create_review_form_container';
 import EditReviewContainer from '../reviews/edit_review_form_container';
 
 function Modal({modal, closeModal}) {
-  debugger
   if (!modal) return null;
 
   let component;
   switch (modal) {
     case 'create-review':
-      debugger
       component = <CreateReviewContainer />;
       break;
     case 'edit-review':
@@ -31,7 +29,6 @@ function Modal({modal, closeModal}) {
 }
 
 const mSTP = state => {
-  debugger
   return {
     modal: state.ui.modal
   }

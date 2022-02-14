@@ -9,9 +9,11 @@ import ParkShowContainer from './parks/park_show_container';
 import TrailShowContainer from './trails/trail_show_container';
 // import SearchBarContainer from './search/search_bar_container';
 import Footer from './footer/footer';
+// import Modal from './modal/modal';
 
 const App = () => (
   <div>
+    {/* <Modal /> */}
     <header>
       <NavBarContainer />
     </header>
