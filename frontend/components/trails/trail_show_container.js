@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { fetchTrail } from '../../actions/trail_actions';
 import { openModal } from '../../actions/modal_actions';
 import TrailShow from './trail_show';
@@ -17,4 +18,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(TrailShow);
+export default withRouter(connect(mSTP, mDTP)(TrailShow));

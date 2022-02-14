@@ -1,16 +1,19 @@
 import React from 'react';
 import NearbyTrailIndex from './nearby_trail_index';
 import ReactStars from 'react-rating-stars-component';
+// import CreateReviewContainer from '../../'
 // import ReviewIndex from '../reviews/review_index';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import SubNav from '../nav_bar/sub_nav';
 import Map from '../maps/map';
+import Modal from '../modal/modal';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute, faPrint, faShare } from "@fortawesome/free-solid-svg-icons";
 
 class TrailShow extends React.Component {
     constructor(props) {
         super(props)
+        this.openModal = this.openModal.bind(this);
     }
 
     componentDidMount() {
@@ -25,6 +28,7 @@ class TrailShow extends React.Component {
 
     openModal(modal){
         if (this.props.currentUser) {
+            debugger
             this.props.openModal(modal)
         } else {
             this.props.history.push('/login')
@@ -55,7 +59,6 @@ class TrailShow extends React.Component {
                             <h2>{trail.name}</h2>
                             <div className="trail-diff">
                                 <p className={`${trail.difficulty}`}>{trail.difficulty}</p>
-                                {/* <p>Ratings</p> */}
                                 <ReactStars
                                 count={5}
                                 size={20}
@@ -123,7 +126,10 @@ class TrailShow extends React.Component {
                             </div>
 
                             <div className="trail-review">
-                                <h2>Reviews</h2>
+                                <div>
+                                    <h2>Reviews</h2>
+                                    <button onClick={() => this.openModal('create-review')}>Write review</button>
+                                </div>
                                 <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} />
                             </div>
 

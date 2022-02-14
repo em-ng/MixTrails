@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactStars from 'react-rating-stars-component';
 
 const NearbyTrailIndexItem = ({trails}) => {
-  // debugger
   return (
    
     <ul>
@@ -18,7 +18,13 @@ const NearbyTrailIndexItem = ({trails}) => {
                       <p>{trail.park.name}</p>
                       <div className="diff-rating">
                         <p className={`${trail.difficulty}`}>{trail.difficulty}</p>
-                        <p>Rating</p>
+                        {/* <ReactStars
+                                count={5}
+                                size={20}
+                                isHalf={true}
+                                edit={false}
+                                value={avgRating}
+                        /> */}
                       </div>
                       <p>Length: {trail.length} mi</p>
                   </div>

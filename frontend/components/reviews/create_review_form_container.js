@@ -4,6 +4,7 @@ import { createReview } from '../../actions/review_actions';
 import { closeModal } from '../../actions/modal_actions';
 
 const mSTP = (state, ownProps) => {
+    debugger
     return {
         review: {
             rating: null,
@@ -19,6 +20,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
+    debugger
     return {
         action: review => dispatch(createReview(review)),
         closeModal: () => dispatch(closeModal())

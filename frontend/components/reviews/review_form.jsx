@@ -19,6 +19,7 @@ class ReviewForm extends React.Component {
 
     render() {
         const { trail } = this.props;
+        debugger
         return(
             <form onSubmit={this.handleSubmit}>
                 <h1>{trail.name}</h1>

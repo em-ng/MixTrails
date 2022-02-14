@@ -1,19 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { closeModal } from '../../actions/modal_actions';
 import CreateReviewContainer from '../reviews/create_review_form_container';
 import EditReviewContainer from '../reviews/edit_review_form_container';
 
 function Modal({modal, closeModal}) {
+  debugger
   if (!modal) return null;
 
   let component;
   switch (modal) {
     case 'create-review':
+      debugger
       component = <CreateReviewContainer />;
       break;
     case 'edit-review':
-      component = <EditReviewContainer review={modal.review} />;
+      component = <EditReviewContainer />;
       break;
     default:
       return null;
@@ -28,6 +31,7 @@ function Modal({modal, closeModal}) {
 }
 
 const mSTP = state => {
+  debugger
   return {
     modal: state.ui.modal
   }
@@ -39,4 +43,4 @@ const mDTP = dispatch => {
   }
 }
 
-export default connect(mSTP, mDTP)(Modal);
+export default withRouter(connect(mSTP, mDTP)(Modal));
