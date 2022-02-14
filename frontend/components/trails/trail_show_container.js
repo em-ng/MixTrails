@@ -3,7 +3,6 @@ import { fetchTrail } from '../../actions/trail_actions';
 import TrailShow from './trail_show';
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
         trail: state.entities.trails[ownProps.match.params.trailId],
         currentUser: state.session.currentUserId
