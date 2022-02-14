@@ -1,6 +1,7 @@
 import React from 'react';
 import NearbyTrailIndex from './nearby_trail_index';
-import ReviewIndex from '../reviews/review_index';
+// import ReviewIndex from '../reviews/review_index';
+import ReviewIndexContainer from '../reviews/review_index_container';
 import SubNav from '../nav_bar/sub_nav';
 import Map from '../maps/map';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +23,7 @@ class TrailShow extends React.Component {
     }
 
     render() {
-        const { trail } = this.props;
+        const { trail, currentUser } = this.props;
         if (!trail) return null;
         if (!trail.reviews) return null;
         if (!trail.nearbyTrails) return null;
@@ -101,9 +102,7 @@ class TrailShow extends React.Component {
 
                             <div className="trail-review">
                                 <h2>Reviews</h2>
-                                <div className="reviews">
-                                    <ReviewIndex reviews={trail.reviews} />
-                                </div>
+                                <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} />
                             </div>
 
                         </div>
