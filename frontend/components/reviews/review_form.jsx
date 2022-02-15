@@ -11,6 +11,12 @@ class ReviewForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.match.params.trailId !== prevProps.match.params.trailId) {
+            this.props.fetchTrail(this.props.match.params.trailId)
+        }
+    }
+
     update(field) {
         // return e => {
         //     debugger
@@ -23,7 +29,7 @@ class ReviewForm extends React.Component {
             const newState = this.state;
             newState[field] = field === "rating" ? e : e.target.value;
             this.setState(newState);
-          };
+        };
     }
 
     handleSubmit(e) {
