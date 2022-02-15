@@ -35,12 +35,12 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.action(this.state)
-        // if (this.props.formType === "create") {
-        //     this.props.action(this.state)
-        // } else {
-        //     this.props.action(this.state)
-        // }
+        // this.props.action(this.state)
+        if (this.props.formType === "create") {
+            this.props.action(this.state).then(resp => this.props.fetchTrail(resp.review.trail_id))
+        } else {
+            this.props.action(this.state).then(resp => this.props.fetchTrail(resp.review.trail_id))
+        }
         this.props.closeModal()
     }
 

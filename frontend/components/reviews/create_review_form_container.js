@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import ReviewForm from './review_form';
 import { createReview } from '../../actions/review_actions';
 import { closeModal } from '../../actions/modal_actions';
+import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
     debugger
@@ -24,7 +25,8 @@ const mDTP = dispatch => {
     debugger
     return {
         action: review => dispatch(createReview(review)),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        fetchTrail: trailId => dispatch(fetchTrail(trailId))
     }
 }
 
