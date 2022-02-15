@@ -12,21 +12,29 @@ class ReviewForm extends React.Component {
     }
 
     update(field) {
-        debugger
-        return e => {
-            this.setState({ [field]: e.currentTarget.value })
-        }
+        // return e => {
+        //     debugger
+        //     this.setState({ [field]: e.currentTarget.value })
+        //     console.log(e.currentTarget.value)
+        //     console.log(e.currentTarget)
+        // }
+
+        return (e) => {
+            const newState = this.state;
+            newState[field] = field === "rating" ? e : e.target.value;
+            this.setState(newState);
+          };
     }
 
     handleSubmit(e) {
         e.preventDefault();
 
-        // this.props.action(this.state)
-        if (this.props.formType === "create") {
-            this.props.action(this.state)
-        } else {
-            this.props.action(this.state)
-        }
+        this.props.action(this.state)
+        // if (this.props.formType === "create") {
+        //     this.props.action(this.state)
+        // } else {
+        //     this.props.action(this.state)
+        // }
         this.props.closeModal()
     }
 
@@ -45,6 +53,7 @@ class ReviewForm extends React.Component {
                     <input
                         type="date"
                         onChange={this.update('activity_date')}
+                        value={this.state.activity_date}
                     />
                     <ReactStars
                         count={5}
