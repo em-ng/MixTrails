@@ -2,7 +2,7 @@ import React from 'react';
 import ReactStars from 'react-rating-stars-component';
 // import ReviewIndexItem from './review_index_item';
 
-const ReviewIndex = ({reviews, currentUser}) => {
+const ReviewIndex = ({reviews, currentUser, deleteReview}) => {
 
     return(
         <>
@@ -36,7 +36,7 @@ const ReviewIndex = ({reviews, currentUser}) => {
                     <p>{review.review_text}</p>
                     {currentUser === review.user_id ? (
                         <div className="review-options">
-                            <p onClick={() => this.props.deleteReview(review.id)}>Delete</p>
+                            <p onClick={() => deleteReview(review.id)}>Delete</p>
                             <p>|</p>
                             {/* <p onClick={() => this.props.openModal()}>Edit</p> */}
                         </div>

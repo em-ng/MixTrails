@@ -11,7 +11,7 @@ import { openModal } from '../../actions/modal_actions';
 
 const mDTP = dispatch => {
     return {
-        deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+        // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
         openModal: modal => dispatch(openModal(modal))
     }
 }

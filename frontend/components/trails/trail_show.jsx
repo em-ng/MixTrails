@@ -14,6 +14,7 @@ class TrailShow extends React.Component {
     constructor(props) {
         super(props)
         this.openModal = this.openModal.bind(this);
+        this.deleteReview = this.deleteReview.bind(this);
     }
 
     componentDidMount() {
@@ -26,13 +27,16 @@ class TrailShow extends React.Component {
         }
     }
 
-    openModal(modal){
+    openModal(modal) {
         if (this.props.currentUser) {
-            debugger
             this.props.openModal(modal)
         } else {
             this.props.history.push('/login')
         }
+    }
+
+    deleteReview(id) {
+        this.props.deleteReview(id).then(resp => this.props.fetchTrail(this.props.match.params.trailId))
     }
 
     render() {
@@ -131,7 +135,7 @@ class TrailShow extends React.Component {
                                     <h2>Reviews</h2>
                                     <button onClick={() => this.openModal('create-review')}>Write review</button>
                                 </div>
-                                <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} />
+                                <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} deleteReview={this.deleteReview} />
                             </div>
 
                         </div>
