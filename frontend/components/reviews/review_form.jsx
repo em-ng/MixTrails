@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactStars from 'react-rating-stars-component';
-import Calendar from 'react-calendar';
+// import Calendar from 'react-calendar';
 
 
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.review;
+        this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
+        debugger
         return e => {
             this.setState({ [field]: e.currentTarget.value })
         }
@@ -19,7 +21,7 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.action(this.state)
+        // this.props.action(this.state)
         if (this.props.formType === "create") {
             this.props.action(this.state)
         } else {
@@ -28,10 +30,8 @@ class ReviewForm extends React.Component {
         this.props.closeModal()
     }
 
-    // handleRating(newRating){
-    //     let newState = this.state
-    //     newState.review.rating = newRating
-    //     this.setState({newRating})
+    // componentWillUnmount(){
+    //     this.setState(this.props.review)   
     // }
 
     render() {
@@ -49,10 +49,10 @@ class ReviewForm extends React.Component {
                     <ReactStars
                         count={5}
                         size={20}
-                        isHalf={true}
+                        isHalf={false}
                         edit={true}
-                        value={this.state.rating}
                         onChange={this.update('rating')}
+                        value={this.state.rating}
                     />
                 </div>
                 <textarea
