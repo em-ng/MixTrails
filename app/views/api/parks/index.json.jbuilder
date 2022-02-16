@@ -1,7 +1,7 @@
 @parks.each do |park|
     json.parks do
         json.set! park.id do
-            json.extract! park, :id, :name
+            json.extract! park, :id, :name, :description, :summary
             json.trails park.trails.each do |trail|
                 json.extract! trail, :id, :park_id, :name
             end

@@ -4,6 +4,7 @@ import TrailIndex from '../trails/trail_index';
 import Map from '../maps/map';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute, faPrint, faShare } from "@fortawesome/free-solid-svg-icons";
+import ReactStars from 'react-rating-stars-component';
 
 class ParkShow extends React.Component {
     constructor(props) {
@@ -29,6 +30,14 @@ class ParkShow extends React.Component {
         if (!park) return null;
         if(!trails) return null;
         const pictures = Object.values(trails).slice(0, 3);
+        // debugger
+        // let avgRating = 0;
+        // let numReviews = 0;
+        // park.trails.reviews.forEach(review => {
+        //     avgRating += review.rating
+        //     numReviews += 1
+        // })
+        // avgRating = (avgRating / (numReviews));
 
         return(
             <div className="park-show">
@@ -53,6 +62,18 @@ class ParkShow extends React.Component {
                 <div className='park-header'>
                     <h2>Best trails in {park.name}</h2>
                 </div>
+
+                {/* <div className="park-rating">
+                    <ReactStars
+                        count={5}
+                        size={20}
+                        isHalf={true}
+                        edit={false}
+                        value={avgRating}
+                        color="#e6e6e6"
+                    />
+
+                </div> */}
 
                 <div>
                     <p className="park-summ">{park.summary}</p>

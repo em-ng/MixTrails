@@ -1,6 +1,9 @@
 # json.set! @park.id do
 json.extract! @park, :id, :name, :description, :summary, :park_type, :acreage, :contact, :lat, :long, :trails
 
+
+# json.extract! @trails, :reviews
+
 # json.array! @trails do |trail|
    
 #     json.photoURL url_for(trail.photo)

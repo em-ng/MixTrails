@@ -16,8 +16,7 @@ class Map extends React.Component {
 
         const mapOptions = {
           center: center,
-          zoom: 8,
-          gestureHandling: "greedy"
+          zoom: 8
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -41,6 +40,16 @@ class Map extends React.Component {
             })
         }
     }
+
+   
+    // componentDidUpdate(prevProps) {
+    //     // debugger
+    //     if (this.props.match.params.parkId !== prevProps.match.params.parkId) {
+    //         this.props.fetchPark(this.props.match.params.parkId)
+    //         this.props.fetchTrails(this.props.match.params.parkId)
+    //     }
+    // }
+    
 
     render() {
         return(
