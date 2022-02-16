@@ -69,6 +69,7 @@ class ReviewForm extends React.Component {
                         edit={true}
                         onChange={this.update('rating')}
                         value={this.state.rating}
+                        color="#e6e6e6"
                     />
                
                     <textarea

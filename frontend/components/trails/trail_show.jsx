@@ -70,6 +70,7 @@ class TrailShow extends React.Component {
                                 isHalf={true}
                                 edit={false}
                                 value={avgRating}
+                                color="#e6e6e6"
                                 />
                             </div>
                             <p className="park-name">{trail.park.name}</p>

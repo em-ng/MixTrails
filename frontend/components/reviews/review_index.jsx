@@ -25,6 +25,7 @@ const ReviewIndex = ({reviews, currentUser, openModal, deleteReview}) => {
                                 isHalf={true}
                                 edit={false}
                                 value={review.rating}
+                                color="#e6e6e6"
                             />
                             <p>{review.activity_date}</p>
                         </div>
