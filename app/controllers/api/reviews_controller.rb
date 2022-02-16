@@ -13,7 +13,7 @@ class Api::ReviewsController < ApplicationController
 
     def update
         @review = Review.find_by(id: params[:id])
-        if current_user.id == @review.user_id && @review.update(review_params)
+        if (current_user.id == @review.user_id) && @review.update(review_params)
             render :show        
         else
             render json: @review.errors.full_messages, status: 422

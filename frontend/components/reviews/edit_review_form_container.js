@@ -7,7 +7,6 @@ import { closeModal } from '../../actions/modal_actions';
 import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         // review: state.entities.reviews[ownProps.match.params.reviewId],
         review: {
@@ -39,7 +38,7 @@ export default withRouter(connect(mSTP, mDTP)(ReviewForm));
 //     }
 
 //     render() {
-//         const { action, review } = this.props;
+//         const { action, review, formType, trail, closeModal } = this.props;
 //         debugger
 
 //         if (!review) return null;
@@ -49,6 +48,8 @@ export default withRouter(connect(mSTP, mDTP)(ReviewForm));
 //                 action = {action}
 //                 formType = {formType}
 //                 review={review}
+//                 trail={trail}
+//                 closeModal={closeModal}
 //             />
 //         )
 //     }
