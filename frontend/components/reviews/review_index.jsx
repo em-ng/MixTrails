@@ -11,7 +11,7 @@ const ReviewIndex = ({reviews, currentUser, openModal, deleteReview}) => {
                 {/* flex above class in column direction */}
                 <div className="review-top">
                     <div className="review-left">
-                        <img className="profile-icon" src={window.profile_url} />
+                        <img className="review-icon" src={window.profile_url} />
                     </div>
 
                     <div className="review-right">

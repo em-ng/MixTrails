@@ -132,9 +132,9 @@ class TrailShow extends React.Component {
                                 <p>{trail.description}</p>
                             </div>
 
-                            <div className="trail-review">
-                                <div>
-                                    <h2>Reviews</h2>
+                            <div className="trail-review-container">
+                                <div className="trail-review">
+                                    <h2>Reviews ({trail.reviews.length})</h2>
                                     <button onClick={() => this.openModal({type: 'create-review'})}>Write review</button>
                                 </div>
                                 <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} openModal={this.openModal} deleteReview={this.deleteReview} />
