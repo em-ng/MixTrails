@@ -2,7 +2,7 @@ import React from 'react';
 import ReactStars from 'react-rating-stars-component';
 // import ReviewIndexItem from './review_index_item';
 
-const ReviewIndex = ({reviews, currentUser, deleteReview}) => {
+const ReviewIndex = ({reviews, currentUser, openModal, deleteReview}) => {
 
     return(
         <>
@@ -38,7 +38,7 @@ const ReviewIndex = ({reviews, currentUser, deleteReview}) => {
                         <div className="review-options">
                             <p onClick={() => deleteReview(review.id)}>Delete</p>
                             <p>|</p>
-                            {/* <p onClick={() => this.props.openModal()}>Edit</p> */}
+                            <p onClick={() => openModal({type: 'edit-review', review: review})}>Edit</p>
                         </div>
                     ) : null}
                 </div>

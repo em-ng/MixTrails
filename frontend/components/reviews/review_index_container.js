@@ -1,19 +1,22 @@
 import { connect } from 'react-redux';
 import ReviewIndex from './review_index';
+import { withRouter } from 'react-router-dom';
 import { deleteReview } from '../../actions/review_actions';
 import { openModal } from '../../actions/modal_actions';
 
-// const mSTP = (state) => {
-//     return {
-//         user: state.session.currentUserId
-//     }
-// }
+const mSTP = (state, ownProps) => {
+    debugger
+    return {
+        user: state.session.currentUserId,
+        review: ownProps.review
+    }
+}
 
 const mDTP = dispatch => {
     return {
         // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
-        openModal: modal => dispatch(openModal(modal))
+        // openModal: modal => dispatch(openModal(modal))
     }
 }
 
-export default connect(null, mDTP)(ReviewIndex);
+export default withRouter(connect(mSTP)(ReviewIndex));

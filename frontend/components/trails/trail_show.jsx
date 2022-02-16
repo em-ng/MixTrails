@@ -27,9 +27,9 @@ class TrailShow extends React.Component {
         }
     }
 
-    openModal(modal) {
+    openModal(type) {
         if (this.props.currentUser) {
-            this.props.openModal(modal)
+            this.props.openModal(type)
         } else {
             this.props.history.push('/login')
         }
@@ -133,9 +133,9 @@ class TrailShow extends React.Component {
                             <div className="trail-review">
                                 <div>
                                     <h2>Reviews</h2>
-                                    <button onClick={() => this.openModal('create-review')}>Write review</button>
+                                    <button onClick={() => this.openModal({type: 'create-review'})}>Write review</button>
                                 </div>
-                                <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} deleteReview={this.deleteReview} />
+                                <ReviewIndexContainer reviews={trail.reviews} currentUser={currentUser} openModal={this.openModal} deleteReview={this.deleteReview} />
                             </div>
 
                         </div>

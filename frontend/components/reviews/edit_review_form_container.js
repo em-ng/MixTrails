@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import React from 'react';
 import ReviewForm from './review_form';
 import { updateReview } from '../../actions/review_actions';
@@ -6,9 +7,19 @@ import { closeModal } from '../../actions/modal_actions';
 import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
+    debugger
     return {
-        review: state.reviews[ownProps.match.params.reviewId],
-        formType: 'update'
+        // review: state.entities.reviews[ownProps.match.params.reviewId],
+        review: {
+            id: ownProps.review.id,
+            user_id: ownProps.review.user_id,
+            trail_id: ownProps.review.trail_id,
+            activity_date: ownProps.review.activity_date,
+            review_text: ownProps.review.review_text,
+            rating: ownProps.review.rating
+        },
+        formType: 'update',
+        trail: state.entities.trails[ownProps.match.params.trailId]
     }
 }
 
@@ -20,25 +31,28 @@ const mDTP = dispatch => {
     }
 }
 
-class EditReviewForm extends React.Component {
-    componentDidMount() {
-        this.props.review
-    }
+export default withRouter(connect(mSTP, mDTP)(ReviewForm));
 
-    render() {
-        const { action, review } = this.props;
+// class EditReviewForm extends React.Component {
+//     componentDidMount() {
+//         this.props.review
+//     }
 
-        if (!review) return null;
+//     render() {
+//         const { action, review } = this.props;
+//         debugger
 
-        return(
-            <ReviewForm
-                action = {action}
-                // formType = {formType}
-                review={review}
-            />
-        )
-    }
-}
+//         if (!review) return null;
 
-export default connect(mSTP, mDTP)(EditReviewForm);
+//         return(
+//             <ReviewForm
+//                 action = {action}
+//                 formType = {formType}
+//                 review={review}
+//             />
+//         )
+//     }
+// }
+
+// export default withRouter(connect(mSTP, mDTP)(EditReviewForm));
 

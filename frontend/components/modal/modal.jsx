@@ -9,12 +9,12 @@ function Modal({modal, closeModal}) {
   if (!modal) return null;
 
   let component;
-  switch (modal) {
+  switch (modal.type) {
     case 'create-review':
       component = <CreateReviewContainer />;
       break;
     case 'edit-review':
-      component = <EditReviewContainer />;
+      component = <EditReviewContainer review={modal.review} />;
       break;
     default:
       return null;

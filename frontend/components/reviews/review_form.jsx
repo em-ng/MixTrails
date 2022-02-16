@@ -54,6 +54,7 @@ class ReviewForm extends React.Component {
         return(
             <form onSubmit={this.handleSubmit}>
                 <h1>{trail.name}</h1>
+                {/* <h1>{this.props.trail}</h1> */}
                 <div>
                     {/* <Calendar onChange={this.update('activity_date')} value={this.state.activity_date}/> */}
                     <input
