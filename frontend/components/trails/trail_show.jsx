@@ -45,11 +45,11 @@ class TrailShow extends React.Component {
         if (!trail.reviews) return null;
         if (!trail.nearbyTrails) return null;
         
-        // let avgRating = 0;
-        // trail.reviews.forEach(review => {
-        //     avgRating += review.rating
-        // })
-        // avgRating = (avgRating / (trail.reviews.length));
+        let avgRating = 0;
+        trail.reviews.forEach(review => {
+            avgRating += review.rating
+        })
+        avgRating = (avgRating / (trail.reviews.length));
 
         return(
             <div className="trail-bg">
@@ -72,6 +72,7 @@ class TrailShow extends React.Component {
                                 value={avgRating}
                                 color="#e6e6e6"
                                 />
+                                <p>({trail.reviews.length})</p>
                             </div>
                             <p className="park-name">{trail.park.name}</p>
                         </div>
