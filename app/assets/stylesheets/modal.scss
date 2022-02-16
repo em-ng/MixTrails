@@ -4,9 +4,9 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.425);
+    background-color: rgba(0,0,0,.4);
     z-index: 3;
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(2px);
 }
   
 .modal-child {
@@ -14,9 +14,4 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    padding: 70px 25px;
-    text-align: center;
-    line-height: 40px;
-    box-shadow: 0px 0px 16px 3px #FFFFFF;
 }

@@ -53,8 +53,9 @@ class ReviewForm extends React.Component {
         debugger
         return(
             <form onSubmit={this.handleSubmit}>
+                <div className="close-x" onClick={this.props.closeModal}>&#10006;</div>
                 <h1>{trail.name}</h1>
-                {/* <h1>{this.props.trail}</h1> */}
+                
                 <div>
                     {/* <Calendar onChange={this.update('activity_date')} value={this.state.activity_date}/> */}
                     <input
@@ -64,7 +65,7 @@ class ReviewForm extends React.Component {
                     />
                     <ReactStars
                         count={5}
-                        size={20}
+                        size={40}
                         isHalf={false}
                         edit={true}
                         onChange={this.update('rating')}
@@ -76,7 +77,11 @@ class ReviewForm extends React.Component {
                     value={this.state.review_text}
                     onChange={this.update('review_text')}
                 />
-                <input type="submit" value="Post"/>
+                {this.state.rating ? (
+                    <input type="submit" value="Post"/>
+                ) : (
+                    <input type="submit" value="Post" disabled/>
+                )}
             </form>
         )
     }
