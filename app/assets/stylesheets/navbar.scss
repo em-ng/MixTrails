@@ -13,6 +13,9 @@
     font-family: 'Megrim', cursive;
     font-size: 40px;
     width: 300px;
+    // border: 2px solid pink;
+    padding-top: 8px;
+    padding-right: 100px;
 }
 
 .logo-icon {
@@ -40,6 +43,7 @@
     font-size: 20px;
     border: none;
     width: 40px;
+    cursor: pointer;
 }
   
 .profile {
@@ -71,6 +75,7 @@
     border-radius: 9px;
     border: none;
     font-weight: 100;
+    cursor: pointer;
 }
   
 .profile-content button:hover {
