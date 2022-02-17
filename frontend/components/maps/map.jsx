@@ -4,19 +4,33 @@ import { withRouter } from 'react-router-dom';
 class Map extends React.Component {
     constructor(props) {
         super(props);
+        // this.state = {coord: {lat: this.props.park.lat, lng: this.props.park.long} };
+        this.renderMap = this.renderMap.bind(this)
     }
 
-    componentDidMount() {
+    // setCenter() {
+    //     let center;
+    //     if (this.props.park) {
+    //         center = { lat: this.props.park.lat, lng: this.props.park.long };
+    //     } else {
+    //         center = { lat: this.props.trail.lat, lng: this.props.trail.long };
+    //     }
+    // }
+
+    renderMap() {
+        // debugger
+
         let center;
         if (this.props.park) {
             center = { lat: this.props.park.lat, lng: this.props.park.long };
+            // center = this.state.coord
         } else {
             center = { lat: this.props.trail.lat, lng: this.props.trail.long };
         }
 
         const mapOptions = {
           center: center,
-          zoom: 8
+          zoom: 10
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -41,17 +55,21 @@ class Map extends React.Component {
         }
     }
 
-   
-    // componentDidUpdate(prevProps) {
-    //     // debugger
-    //     if (this.props.match.params.parkId !== prevProps.match.params.parkId) {
-    //         this.props.fetchPark(this.props.match.params.parkId)
-    //         this.props.fetchTrails(this.props.match.params.parkId)
-    //     }
+    componentDidMount() {
+        this.renderMap()
+    }
+
+    componentDidUpdate() {
+        this.renderMap();
+    }
+
+    // componentWillUnmount() {
+    //     this.renderMap();
     // }
     
 
     render() {
+
         return(
             <div className="map" ref={ map => this.mapNode = map } />
         )

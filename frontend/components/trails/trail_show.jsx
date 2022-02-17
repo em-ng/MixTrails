@@ -36,7 +36,9 @@ class TrailShow extends React.Component {
     }
 
     deleteReview(id) {
-        this.props.deleteReview(id).then(resp => this.props.fetchTrail(this.props.match.params.trailId))
+        if (confirm('Are you sure you want to delete this review?')) {
+            this.props.deleteReview(id).then(resp => this.props.fetchTrail(this.props.match.params.trailId))
+        }
     }
 
     render() {

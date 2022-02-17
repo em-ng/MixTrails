@@ -7,7 +7,7 @@ const ReviewIndex = ({reviews, currentUser, openModal, deleteReview}) => {
     return(
         <>
             {reviews.map((review) => (
-            <div className="reviews-container">
+            <div className="reviews-container" key={review.id}>
                 {/* flex above class in column direction */}
                 <div className="review-top">
                     <div className="review-left">

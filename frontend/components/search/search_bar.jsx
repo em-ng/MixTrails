@@ -127,7 +127,7 @@ class SearchBar extends React.Component {
                                         <Link to={`/parks/${park.id}`}>
                                             <FontAwesomeIcon icon={faTree} />
                                             <div>
-                                                <p className-="subtitle">{park.name}</p>
+                                                <p className="subtitle">{park.name}</p>
                                                 <p className="subtext">{park.id === 1 ? "New Hampshire, " : "Maine, "}United States of America</p>
                                             </div>
                                         </Link>
