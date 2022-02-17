@@ -15,10 +15,8 @@ const ReviewIndex = ({reviews, currentUser, openModal, deleteReview}) => {
                     </div>
 
                     <div className="review-right">
-                        {/* above class in column direction */}
                         <h3>{review.reviewer.firstname} {review.reviewer.lastname}</h3>
                         <div>
-                            {/* above class in reg direction */}
                             <ReactStars
                                 count={5}
                                 size={20}
