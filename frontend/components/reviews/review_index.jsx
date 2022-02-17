@@ -37,9 +37,9 @@ const ReviewIndex = ({reviews, currentUser, openModal, deleteReview}) => {
                     <p>{review.review_text}</p>
                     {currentUser === review.user_id ? (
                         <div className="review-options">
-                            <p onClick={() => deleteReview(review.id)}>Delete</p>
+                            <p className="option-text" onClick={() => deleteReview(review.id)}>Delete</p>
                             <p>|</p>
-                            <p onClick={() => openModal({type: 'edit-review', review: review})}>Edit</p>
+                            <p className="option-text" onClick={() => openModal({type: 'edit-review', review: review})}>Edit</p>
                         </div>
                     ) : null}
                 </div>
