@@ -6,7 +6,6 @@ import { closeModal } from '../../actions/modal_actions';
 import { fetchTrail } from '../../actions/trail_actions';
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         review: {
             rating: 0,
@@ -22,7 +21,6 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    debugger
     return {
         action: review => dispatch(createReview(review)),
         closeModal: () => dispatch(closeModal()),

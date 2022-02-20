@@ -5,7 +5,6 @@ import { deleteReview } from '../../actions/review_actions';
 import { openModal } from '../../actions/modal_actions';
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         user: state.session.currentUserId,
         review: ownProps.review
