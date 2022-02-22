@@ -18,8 +18,8 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-links">
-                    <a className="icon" href="https://github.com/em-ng"><FontAwesomeIcon icon={["fab", "github-alt"]} /></a>
-                    <a className="icon" href="https://www.linkedin.com/in/em-ng/"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></a>
+                    <a className="icon" href="https://github.com/em-ng" target="_blank"><FontAwesomeIcon icon={["fab", "github-alt"]} /></a>
+                    <a className="icon" href="https://www.linkedin.com/in/em-ng/" target="_blank"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></a>
                 </div>
             </div>
         </footer>
