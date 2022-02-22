@@ -13,11 +13,13 @@ MixTrails is built with a backend that utilizes Ruby on Rails framework, Postgre
 ### CRUD Functionality for Reviews
 
 Users are able to see all reviews posted for a given trail when navigating through the site. When logged in, users are also able to create, edit, or delete their own review.
+
 <img src="app/assets/images/review.gif">
 
 ### Search Bar
 
 Users are able to search for their desired trail or park by typing into the search bar. A search bar is available on every page to allow ease of access and all inputs are filtered as the user is typing.
+
 <img src="app/assets/images/search.gif">
 
 ## Future Implementation
